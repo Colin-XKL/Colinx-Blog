@@ -1,5 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
+defaultContentLanguage = "zh-cn"
+defaultContentLanguageInSubdir = true
 theme = "hello-friend"
 paginate = 7
 
@@ -55,5 +57,46 @@ paginate = 7
       [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
+        url = "/about"
+
+  [languages.zh-cn]
+    title = "Colinx Blog"
+    subtitle = "Colin的个人博客"
+    keywords = ""
+    copyright = ""
+    menuMore = "显示更多"
+    writtenBy = "作者"
+    readMore = "点击阅读"
+    readOtherPosts = "阅读更多"
+    newerPosts = "上一页"
+    olderPosts = "下一页"
+    minuteReadingTime = "分钟"
+    dateFormatSingle = "2006-01-02"
+    dateFormatList = "2006-01-02"
+
+    [languages.zh-cn.params.logo]
+      logoText = "Colinx Blog"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+    [languages.zh-cn.menu]
+      [[languages.zh-cn.menu.main]]
+        identifier = "archive"
+        name = "归档"
+        url = "/archive"
+      [[languages.zh-cn.menu.main]]
+        identifier = "categories"
+        name = "分类"
+        url = "/categories"
+      [[languages.zh-cn.menu.main]]
+        identifier = "tags"
+        name = "标签"
+        url = "/tags"
+      [[languages.zh-cn.menu.main]]
+        identifier = "about"
+        name = "关于"
         url = "/about"
       
