@@ -9,9 +9,11 @@ paginate = 7
   # "light" or "dark"
   defaultTheme = "light"
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 5
   # Enable to show reading time in minutes for posts
   showReadingTime = false
+  # leave empty to disable, enter display text to enable
+  lastModDisplay = "最后修改"
 
 [languages]
   [languages.en]
@@ -39,10 +41,19 @@ paginate = 7
 
     [languages.en.menu]
       [[languages.en.menu.main]]
+        identifier = "archive"
+        name = "Archive"
+        url = "/archive"
+      [[languages.en.menu.main]]
+        identifier = "categories"
+        name = "Categories"
+        url = "/categories"
+      [[languages.en.menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags"
+      [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
         url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
+      
