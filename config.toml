@@ -90,13 +90,13 @@ paginate = 7
       [[languages.zh-cn.menu.main]]
         identifier = "categories"
         name = "分类"
-        url = "/categories"
+        url = "/zh-cn/categories"
       [[languages.zh-cn.menu.main]]
         identifier = "tags"
         name = "标签"
-        url = "/tags"
+        url = "/zh-cn/tags"
       [[languages.zh-cn.menu.main]]
         identifier = "about"
         name = "关于"
-        url = "/about"
+        url = "/zh-cn/aboutme"
       
