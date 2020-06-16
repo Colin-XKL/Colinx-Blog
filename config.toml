@@ -99,4 +99,8 @@ paginate = 7
         identifier = "about"
         name = "关于"
         url = "/zh-cn/aboutme"
+      [[languages.zh-cn.menu.main]]
+        identifier = "rss"
+        name = "RSS"
+        url = "/zh-cn/index.xml"
       
