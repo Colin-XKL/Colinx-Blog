@@ -54,27 +54,29 @@ C语言的编译需要编译器，一般可以选择gcc或是clang。Mac系统�
 
 单击方形图标，打开扩展面板。
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015620.png" alt="image-20201218222511011" style="zoom:50%;" />
+<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015621.png" alt="image-20201218223234296" style="zoom:50%;" />
+
+
 
 搜索`chinese`安装汉化插件。
 
-![image-20201218223234296](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015621.png)
+![image-20201218222747511](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015622.png)
 
-搜索`code runner`安装Code Runner插件。并按指示重启应用（Reload字样）![image-20201218222747511](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015622.png)
+搜索`code runner`安装Code Runner插件。并按指示重启应用（Reload字样）
 
-（截图中因为本地已安装故只显示了Uninstall卸载按钮。未安装的情况下会显示Install按钮可点击安装）
+<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015620.png" alt="image-20201218222511011" style="zoom:50%;" />（截图中因为本地已安装故只显示了Uninstall卸载按钮。未安装的情况下会显示Install按钮可点击安装）
 
 其他插件可根据需要安装。此处推荐安装C/C++插件以实现C代码的高亮和补全等功能。
 
-![image-20201218230901008](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015623.png)
-
-重启后进入应用，界面自动切换到中文。再点击扩展图标，展开扩展列表，在已安装扩展中找到**Code Runner**，点击齿轮图标展开菜单，点击进入扩展设置。
-
 <img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015624.png" alt="image-20201218223432859" style="zoom:50%;" />
 
-在输入栏中，在当前选项卡为**用户**的情况下，输入`run`并按回车进行搜索。修改`Run in Terminal`和 `Save File Before Run`的设置项。
+重启后进入应用，界面自动切换到中文。再点击扩展图标，展开扩展列表，在已安装扩展中找到**Code Runner**，点击齿轮图标展开菜单，点击进入扩展设置。<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015627.png" alt="image-20201218224215676" style="zoom:50%;" />
 
-![image-20201218223608291](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015625.png)
+
+
+在输入栏中，在当前选项卡为**用户**的情况下，输入`run`并按回车进行搜索。修改`Run in Terminal`和 `Save File Before Run`的设置项。<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015626.png" alt="image-20201218224059150" style="zoom:50%;" />
+
+
 
 完成了上述的设置，我们就可以来编写C语言的程序了。
 
@@ -82,11 +84,11 @@ C语言的编译需要编译器，一般可以选择gcc或是clang。Mac系统�
 
 点击左侧第一个按钮，来到文件管理面板。点击打开文件夹按钮，打开一个空白的文件夹（任意文件夹都可以，只是保存你代码的地方，一般一个干净整洁的新文件夹为宜）
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015626.png" alt="image-20201218224059150" style="zoom:50%;" />
+<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015623.png" alt="image-20201218230901008" style="zoom:50%;" />
 
 打开文件夹后，在空白处单击右键，新建一个文件，文件名输入为`hello.c`
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015627.png" alt="image-20201218224215676" style="zoom:50%;" />
+<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015629.png" alt="image-20201218224536077" style="zoom:50%;" />
 
 键入代码。
 
@@ -94,7 +96,7 @@ C语言的编译需要编译器，一般可以选择gcc或是clang。Mac系统�
 
 点击右上角的三角形按钮即可自动编译运行你的C语言代码。在窗口下方的终端即可看到输出的`Hello,C!`字样。
 
-![image-20201218224536077](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015629.png)
+![image-20201219021624927](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219021631.png)
 
 ### 完成✅
 
@@ -118,7 +120,9 @@ Mac系统会自带有Python环境。在终端中输入python并回车。
 
 在`>>>`后面键入`exit()`退出python2的交互程序。再次在终端输入`python3`
 
-![截屏2020-12-18 22.58.44](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015631.png)
+![image-20201218231954777](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015634.png)
+
+
 
 此时显示的版本为3.8.6。
 
@@ -126,7 +130,7 @@ Mac系统会自带有Python环境。在终端中输入python并回车。
 
 在交互式命令行界面，我们可以直接输入python语句并执行。
 
-![截屏2020-12-18 23.00.54](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015632.png)
+![截屏2020-12-18 23.00.54](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219021016.png)
 
 一句一句地输入代码再执行显然太低效了。我们需要一个趁手的代码编辑器。
 
@@ -146,21 +150,25 @@ Mac系统会自带有Python环境。在终端中输入python并回车。
 
 点击左侧第一个按钮，来到文件管理面板。点击打开文件夹按钮，打开一个空白的文件夹（任意文件夹都可以，只是保存你代码的地方，一般一个干净整洁的新文件夹为宜）
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015626.png" alt="image-20201218224059150" style="zoom:50%;" />
+<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015623.png" alt="image-20201218230901008" style="zoom:50%;" />
 
 打开文件夹后，在空白处单击右键，新建一个文件，文件名输入为`hello.py`
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015627.png" alt="image-20201218224215676" style="zoom:50%;" />
+<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015629.png" alt="image-20201218224536077" style="zoom:50%;" />
 
 键入代码。
 
-![image-20201218231954777](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015634.png)
+![截屏2020-12-18 22.58.44](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015631.png)
 
 点击右上角的三角形按钮开始运行我们编写的代码
 
-![image-20201218232011039](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015635.png)
+![截屏2020-12-18 23.00.54](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015632.png)
+
+
 
 可以看到，窗口下方的终端中已经出现了`Hello,Python!`字样。代码运行成功。
+
+### 完成✅
 
 现在，开始你的Python语言学习之旅吧！
 
@@ -172,7 +180,7 @@ Mac系统会自带有Python环境。在终端中输入python并回车。
 
 
 
-### 安装Java环境
+### 安装JDK
 
 Mac OS并没有内置Java语言的支持，需要我们另外安装。
 
@@ -191,11 +199,13 @@ Mac OS并没有内置Java语言的支持，需要我们另外安装。
 
 下载完成后点击打开，出现如下的安装界面。根据指引完成安装。
 
-![截屏2020-12-19 00.01.30](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015636.png)
-
-安装完成后，在终端中输入`java -version`并回车确认。看到如下输出说明已经正确安装且Java的版本为`11.0.9.1`即Java 11.![截屏2020-12-19 00.05.33](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015637.png)
+![image-20201218232011039](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015635.png)
 
 
+
+安装完成后，在终端中输入`java -version`并回车确认。看到如下输出说明已经正确安装且Java的版本为`11.0.9.1`即Java 11.
+
+![image-20201218235233365](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015640.png)
 
 下面来为Java的学习配置一个趁手的代码编辑器，以VSCode为例。
 
@@ -209,15 +219,15 @@ Mac OS并没有内置Java语言的支持，需要我们另外安装。
 
 在左侧扩展面板的搜索栏中搜索`java`，选择`Language Support for Java`并安装。
 
-![image-20201218234917588](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015638.png)
+<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015641.png" alt="image-20201218235514041" style="zoom:50%;" />
 
 点击左侧第一个按钮，来到文件管理面板。点击打开文件夹按钮，打开一个空白的文件夹（任意文件夹都可以，只是保存你代码的地方，一般一个干净整洁的新文件夹为宜）
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015626.png" alt="image-20201218224059150" style="zoom:50%;" />
+<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015623.png" alt="image-20201218230901008" style="zoom:50%;" />
 
 打开文件夹后，在空白处单击右键，新建一个文件，文件名输入为`hello.java`
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015627.png" alt="image-20201218224215676" style="zoom:50%;" />
+<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015629.png" alt="image-20201218224536077" style="zoom:50%;" />
 
 键入代码。
 
@@ -225,7 +235,9 @@ Mac OS并没有内置Java语言的支持，需要我们另外安装。
 
 可以看到，在窗口下方的终端面板中，已经成功出现了**Hello, Java!**字样，代码运行成功。
 
-![image-20201218235233365](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015640.png)
+![截屏2020-12-19 00.05.33](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015637.png)
+
+### 完成✅
 
 至此，Mac平台下的Java语言学习环境配置完毕，开始你的Java学习之旅吧！
 
@@ -237,7 +249,9 @@ Mac OS并没有内置Java语言的支持，需要我们另外安装。
 
 ### 1. Java扩展安装弹出提示JDK版本过低
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015641.png" alt="image-20201218235514041" style="zoom:50%;" />
+
+
+<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015638.png" alt="image-20201218234917588" style="zoom:50%;" />
 
 这是因为插件内置的一些功能需要Java来运行，而这些功能又依赖于一些较新的特性，这些特性最早出现在Java 11中。为了更好地学习和使用Java，这里推荐安装Java 11 或Java 12。网站教程或学校授课常常以Java 8为例，但对于初学者来说，几者无太大区别，Java 8的代码都可以被很好地支持。
 
