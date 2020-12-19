@@ -60,12 +60,12 @@ paginate = 7
       [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
-        url = "/about"
+        url = "/aboutme"
 
   [languages.zh-cn]
     title = "Colinx Blog"
     subtitle = "Colin的个人博客"
-    keywords = ""
+    keywords = "Colin,个人博客"
     copyright = ""
     menuMore = "显示更多"
     writtenBy = "作者"
@@ -93,17 +93,17 @@ paginate = 7
       [[languages.zh-cn.menu.main]]
         identifier = "categories"
         name = "分类"
-        url = "/zh-cn/categories"
+        url = "/categories"
       [[languages.zh-cn.menu.main]]
         identifier = "tags"
         name = "标签"
-        url = "/zh-cn/tags"
+        url = "/tags"
       [[languages.zh-cn.menu.main]]
         identifier = "about"
         name = "关于"
-        url = "/zh-cn/aboutme"
+        url = "/aboutme"
       [[languages.zh-cn.menu.main]]
         identifier = "rss"
         name = "RSS"
-        url = "/zh-cn/index.xml"
+        url = "/index.xml"
       
