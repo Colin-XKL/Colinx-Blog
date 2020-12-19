@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
 defaultContentLanguage = "zh-cn"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 theme = "hello-friend"
 paginate = 7
 
