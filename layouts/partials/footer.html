@@ -1,0 +1,28 @@
+<footer class="footer">
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    </span>
+
+    <div class="footer__inner">
+        {{ if $.Site.Copyright }}
+        <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
+        {{ else }}
+        {{ partial "logo.html" . }}
+        <div class="copyright">
+            <span>© {{ now.Year }} Powered by
+                <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+            <span>Theme created by
+                <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+        </div>
+        {{ end }}
+    </div>
+</footer>
+
+<script src="{{ "assets/main.js" | absURL }}"></script>
+<script async src="{{ "assets/prism.js" | absURL }}"></script>
+<script >
+    meta=document.querySelectorAll('.post:not(.on-list) .post-meta')[0];
+    var visitors=`<span id="busuanzi_container_page_pv" style='display:none'> 浏览：<span id="busuanzi_value_page_pv"></span>次</span>`
+    meta.innerHTML=meta.innerHTML+visitors
+</script>
+{{- partial "extended_footer.html" . }}
