@@ -10,6 +10,8 @@ tags:
 - C
 - Python
 - Java
+- Mac
+- 环境配置
 ---
 
 
@@ -44,7 +46,7 @@ C语言的编译需要编译器，一般可以选择gcc或是clang。Mac系统�
 
 前往[VSCode官网](https://code.visualstudio.com/)下载Mac 版VScode。并按照安装程序的指引进行安装。
 
-
+如果下载速度太慢，可以参考[这篇文章](https://zhuanlan.zhihu.com/p/112215618)。
 
 ![截屏2020-12-18 22.20.00](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201219015416.png)
 
