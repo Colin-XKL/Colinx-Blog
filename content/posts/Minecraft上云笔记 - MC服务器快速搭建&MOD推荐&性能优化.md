@@ -48,7 +48,7 @@ tags:
 
 搭建方案千千万，不过Docker来的最实在。Github找到一个非常方便的镜像，[itzg/minecraft-server](https://github.com/itzg/docker-minecraft-server)。这个镜像是运行时构建的，会根据指定的环境变量下载和安装对应的MC服务端程序。支持的服务端有Bukkit、Spigot、PaperSpigot、SpongeForge等等，MC的版本和各项参数均支持通过环境变量自定义，非常方便。而且可以通过更换不同的Tag来使用不同的JDK版本，从8到15，Hotspot和OpenJ9都有，可以按需选用。有arm版本，树莓派也可食用。
 
-安装Docker和docker-compose后，可以方便地编写脚本来快速启动一个MC服务器。这里放上我的docker-compose.yml文件
+安装Docker和docker-compose后，可以方便地编写脚本来快速启动一个MC服务器。这里放上我的`docker-compose.yml`文件
 
 ```yaml
 version: "3"
@@ -122,7 +122,7 @@ volumes:
 
 环境变量可以设置的地方非常多，可以到项目主页的README查看。https://github.com/itzg/docker-minecraft-server
 
-docker-compose up -d 启动，第一次启动他会下载MC、下载MC服务端、初始化世界。之后就可以在MC客户端连接了。（启动完毕就测试一下，测试没问题再进行后面安装mod、服务器调优（按需）的步骤！）
+`docker-compose up -d` 启动，第一次启动他会下载MC、下载MC服务端、初始化世界。之后就可以在MC客户端连接了。（启动完毕就测试一下，测试没问题再进行后面安装mod、服务器调优（按需）的步骤！）
 
 ## MC客户端安装
 
@@ -229,8 +229,9 @@ docker-compose up -d 启动，第一次启动他会下载MC、下载MC服务端�
 > 3. 推荐仅将FTB-Ultimine用于挖泥巴和挖沙，实际使用时可能会出现挖了矿不掉东西的情况┭┮﹏┭┮
 > 4. 不要用铁镐、钻石镐开FTB-Ultimine挖东西！耐久掉的飞快
 > 5. DynamicSurroundings可以在设置里按需屏蔽特定的声音，比如装上后发现我家所在的地形会有乌鸦叫，就很烦。屏蔽之后整个世界都好起来了
-> 6. DynamicSurroundings与Animania有bug，对Animania的某些特有生物进行交互时会触发找不到特定媒体资源的bug，导致游戏崩溃，重新进入又会触发这个bug，只有在进去的一瞬间用指令将玩家杀死才能勉强逃离这个无尽的循环（血泪的教训）
+> 6. DynamicSurroundings与Animania有bug，对Animania的某些特有生物进行交互时会触发找不到特定媒体资源的bug，导致游戏崩溃，重新进入又会触发这个bug，只有在进去的一瞬间用指令将玩家杀死才能勉强逃离这个无尽的循环（血泪的教训）（最新版本已修复）
 > 7. Animania会对每个维度的世界进行注入，比较耗费资源。在同时安装虚无世界AoA的情况下，每次服务器启动Animania需要对其包含的二十多的世界维度进行注入，严重拖慢启动速度
+> 8. Quark模组对1.12的MC只有1.6版本而没有后续版本的内容更新和bug修复。实际使用中有点吃性能
 
 
 
@@ -296,7 +297,7 @@ MC服务器的优化主要聚焦在两个地方
 
 默认值10，建议值4~8。
 
-> 注意：1个**区块**并不是指一个方块，而是指一个`16*16`的区域。这个数值对可视区域的影响并不会很大，你可以放心地减小这个数值。这一项的值每减小1，你的服务器每次就可以少计算​`16*16*256`个方块
+> **注意：**1个***区块***并不是指一个方块，而是指一个`16*16`的区域。这个数值对可视区域的影响并不会很大，你可以放心地减小这个数值。这一项的值每减小1，你的服务器每次就可以少计算​`16*16*256`个方块
 
 **NETWORK_COMPRESSION_THRESHOLD: 512**
 
