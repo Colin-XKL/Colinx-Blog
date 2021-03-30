@@ -14,7 +14,7 @@ tags:
 
 
 
-Flutter中实现拖动排序的列表非常简单，试用官方的`ReorderableListView`替代原本的`ListView`即可，`ListView.builder`同理。
+Flutter中实现拖动排序的列表非常简单，使用官方的`ReorderableListView`替代原本的`ListView`即可，`ListView.builder`同理。
 
 
 
@@ -42,9 +42,7 @@ Flutter中实现拖动排序的列表非常简单，试用官方的`ReorderableL
 }
 ```
 
-上面是官方给的demo，简洁明了。[官方介绍视频](https://www.youtube.com/watch?v=yll3SNXvQCw)下面的评论里，人家直呼比原生Android写的过瘾的多。
-
-阅读文档后我给我的App的界面也加上了可拖动排序的功能。效果如下图
+上面是官方给的demo，简洁明了。[官方介绍视频](https://www.youtube.com/watch?v=yll3SNXvQCw)下面的评论里，人家直呼比原生Android写的过瘾的多。阅读文档后我给我的App的界面也加上了可拖动排序的功能。效果如下图
 
 
 
@@ -63,7 +61,7 @@ Flutter中实现拖动排序的列表非常简单，试用官方的`ReorderableL
 
 针对方案一，以`ReorderableListView` 和`Icon`为关键词搜索，很遗憾的是并没有这方面的资料，又翻了翻源码，并没有找到可以自定义右边这个拖拽按钮的实现。
 
-在Flutter官方的Github仓库中，https://github.com/flutter/flutter/issues/66080#issuecomment-771123430  的issue对相关问题做了阐述，并有提案对`ReorderableListView`进行了改进。该issue对应的pr已经被合并到stable channel，查阅相关API后了解到可以使用`buildDefaultDragHandles: false`，关闭默认的拖拽触发实现，再使用`ReorderableDelayedDragStartListener`包裹原先的`ListTile`即可实现桌面端和移动端都通过长按列表项触发拖拽排序。
+在Flutter官方的Github仓库的issue中，[https://github.com/flutter/flutter/issues/66080#issuecomment-771123430](https://github.com/flutter/flutter/issues/66080#issuecomment-771123430)   对相关问题做了阐述，并有提案对`ReorderableListView`进行了改进。该issue对应的pr已经被合并到stable channel，查阅相关API后了解到可以使用`buildDefaultDragHandles: false`，关闭默认的拖拽触发实现，再使用`ReorderableDelayedDragStartListener`包裹原先的`ListTile`即可实现桌面端和移动端都通过长按列表项触发拖拽排序。
 
 不过相应的，ListTile的`onLongPress`就不能再有响应了。刚好今天完成了滑动删除的实现，现在列表也的删除、排序已经高度可用且多平台统一了。
 
