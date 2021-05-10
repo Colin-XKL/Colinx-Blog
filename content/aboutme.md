@@ -1,26 +1,23 @@
 ---
 title: 关于我
 date: 2019-06-16
-lastmod: 2020-12-19
-
+lastmod: 2021-05-10
 ---
 
 > What lies behind you and what lies in front of you, pales in comparasion to what lies inside of you.
 
 ## About Me
-00后，性别男，爱好女，CS在读，准软件工程师，业余摄影师、音乐制作人。
 
-### My Tags
-C++ 菜鸟，Python调包侠，伪Java开发，  
-找不到人“被兼职”的美工与产品经理
+00 后，性别男，爱好女，CS 在读，准软件工程师，业余摄影师、音乐制作人，RSS 爱好者
 
 ### I Like
-* 刷豆瓣高分电影
-* 看科幻小说
-* 听R&B、Soul等类型的音乐
+
+- 刷豆瓣高分电影
+- 看科幻小说
+- 听 R&B、Soul 等类型的音乐
 
 ## Catch Me
-* 博客主页：https://blog.colinx.one
-* Github 主页: https://github.com/Colin-XKL
-* Email: Colin_XKL#outlook.com
 
+- 博客主页：https://blog.colinx.one
+- Github 主页: https://github.com/Colin-XKL
+- Email: Colin_XKL#outlook.com
