@@ -63,11 +63,11 @@ mkdir RSSmanX && cd $_ && wget https://cdn.jsdelivr.net/gh/Colin-XKL/RSSmanX/doc
 
 不同组件的功能描述见文末。不同版本对应的配置文件如下：
 
-**标准版：**`docker-compose.yml`
+**标准版**：`docker-compose.yml`
 
-**Lite 版：**`docker-compose-lite.yml`
+**Lite 版**：`docker-compose-lite.yml`
 
-**Ultimate 版：**`docker-compose-ultimate.yml`和`config.yaml`
+**Ultimate 版**：`docker-compose-ultimate.yml`和`config.yaml`
 
 选择对应版本下载到本地后都 compose 文件需要重命名为标准的`docker-compose.yml`才可使用
 
