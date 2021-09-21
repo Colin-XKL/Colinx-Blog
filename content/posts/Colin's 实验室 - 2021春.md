@@ -1,5 +1,5 @@
 ---
-title: Colin's实验室  - 2021春
+title: Colin's实验室 - 2021春
 date: 2021-02-25
 lastmod: 2021-03-30
 description: 小玩具及他们的demo
