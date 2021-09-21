@@ -2,15 +2,17 @@
 title: 我的RSS方案与心得
 date: 2021-05-10
 lastmod: 2021-05-10
+cover: https://www.gethow.org/wp-content/uploads/2013/07/feed-297x140.jpg
 description: 使用RSS已经一年有余，这种对信息的主动掌握让我获取信息的质量和密度都上升了一个台阶。最早是使用TTRSS做服务端，安卓手机使用FeedMe订阅，主要订阅的是有源的商业内容站点、个人博客以及其他人分享的使用Feed43或Feedburner压制的源。随着我逐渐加大RSS阅读在我闲暇、琐碎时间内的比重，我对RSS有了更高的期望和要求，便开始了对如何构建更高效、更易用的RSS方案的探索。
-categories:
-  - 杂记
-  - 指南
+draft: false
 tags:
   - RSS
   - Docker
   - Github
   - 代理
+categories:
+  - 杂记
+  - 指南
 ---
 
 # 我的 RSS 方案与心得
