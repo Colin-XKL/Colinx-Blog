@@ -31,7 +31,7 @@
 <script>
     meta = document.querySelectorAll('.post:not(.on-list) .post-meta')[0];
     var visitors = `<span id="busuanzi_container_page_pv" style='display:none'> 浏览：<span id="busuanzi_value_page_pv"></span>次</span>`
-    meta.innerHTML = meta.innerHTML + visitors
+    if (meta) meta.innerHTML = meta.innerHTML + visitors
 </script>
 
 <script>
