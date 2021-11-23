@@ -1,3 +1,9 @@
+<div id="gitalk-container" style="
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    width: 100%
+"></div>
 <footer class="footer">
     <span id="busuanzi_container_site_pv" style='display:none'>
         嗨，第<span id="busuanzi_value_site_pv"></span>位小伙伴 : )
@@ -18,11 +24,28 @@
     </div>
 </footer>
 
-<script src="{{ "assets/main.js" | absURL }}"></script>
-<script async src="{{ "assets/prism.js" | absURL }}"></script>
-<script >
-    meta=document.querySelectorAll('.post:not(.on-list) .post-meta')[0];
-    var visitors=`<span id="busuanzi_container_page_pv" style='display:none'> 浏览：<span id="busuanzi_value_page_pv"></span>次</span>`
-    meta.innerHTML=meta.innerHTML+visitors
+<script src="{{ " assets/main.js" | absURL }}"></script>
+<script async src="{{ " assets/prism.js" | absURL }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<script>
+    meta = document.querySelectorAll('.post:not(.on-list) .post-meta')[0];
+    var visitors = `<span id="busuanzi_container_page_pv" style='display:none'> 浏览：<span id="busuanzi_value_page_pv"></span>次</span>`
+    meta.innerHTML = meta.innerHTML + visitors
 </script>
+
+<script>
+    const gitalk = new Gitalk({
+        clientID: '94eae56b89dcc480bf4d',
+        clientSecret: '1e4218c0293a998a9483ab09ba9ace46cabc76b3',
+        repo: 'Colinx-Blog',      // The repository of store comments,
+        owner: 'Colin-XKL',
+        admin: ['Colin-XKL'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 {{- partial "extended_footer.html" . }}
