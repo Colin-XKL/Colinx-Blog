@@ -5,6 +5,72 @@
     width: 100%;
     text-align: left;
 "></div>
+<div class='js-toc'></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+<style>
+    @media (min-width: 1560px) {
+        .js-toc {
+            display: block !important;
+        }
+    }
+
+    .js-toc {
+        display: none;
+        /* IE and Edge */
+        -ms-overflow-style: none;
+        /* Firefox */
+        scrollbar-width: none;
+    }
+
+    .js-toc::-webkit-scrollbar {
+        /* Chrome, Safari and Opera */
+        display: none;
+    }
+
+    .js-toc {
+        position: fixed;
+        width: 20%;
+        max-width: 400px;
+        right: 3rem;
+        top: 10em;
+        text-align: left;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 1rem 0rem;
+    }
+
+    ol.toc-list>li>a:hover {
+        text-underline-position: under;
+        font-weight: bolder;
+    }
+
+    .toc-list li {
+        list-style: none;
+    }
+
+    .toc-list a {
+        text-decoration: none;
+        text-overflow: ellipsis;
+        display: inline-block;
+        white-space: nowrap;
+        font-size: 1rem;
+    }
+</style>
+
 <footer class="footer">
     <span id="busuanzi_container_site_pv" style='display:none'>
         嗨，第<span id="busuanzi_value_site_pv"></span>位小伙伴 : )
