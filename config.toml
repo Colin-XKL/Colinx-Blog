@@ -3,107 +3,107 @@ languageCode = "en-us"
 defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
 theme = "hello-friend"
-paginate = 7
+paginate = 10
 
 [markup.goldmark.renderer]
-  unsafe= true #避免MarkDown内嵌的HTML被优化掉，尤其是Typora缩放过的图片
+unsafe = true #避免MarkDown内嵌的HTML被优化掉，尤其是Typora缩放过的图片
 
 [params]
-  # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
-  # "light" or "dark"
-  defaultTheme = "light"
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 5
-  # Enable to show reading time in minutes for posts
-  showReadingTime = false
-  # leave empty to disable, enter display text to enable
-  lastModDisplay = "最后修改"
+# dir name of your blog content (default is `content/posts`)
+contentTypeName = "posts"
+# "light" or "dark"
+defaultTheme = "light"
+# if you set this to 0, only submenu trigger will be visible
+showMenuItems = 5
+# Enable to show reading time in minutes for posts
+showReadingTime = false
+# leave empty to disable, enter display text to enable
+lastModDisplay = "最后修改"
+rssFullText = true
 
 [languages]
-  [languages.en]
-    title = "Colinx Blog"
-    subtitle = "Colin's Blog"
-    keywords = ""
-    copyright = ""
-    menuMore = "Show more"
-    writtenBy = "Written by"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    newerPosts = "Newer posts"
-    olderPosts = "Older posts"
-    minuteReadingTime = "min read"
-    dateFormatSingle = "2006-01-02"
-    dateFormatList = "2006-01-02"
+	[languages.en]
+	title = "Colinx Blog"
+	subtitle = "Colin's Blog"
+	keywords = ""
+	copyright = ""
+	menuMore = "Show more"
+	writtenBy = "Written by"
+	readMore = "Read more"
+	readOtherPosts = "Read other posts"
+	newerPosts = "Newer posts"
+	olderPosts = "Older posts"
+	minuteReadingTime = "min read"
+	dateFormatSingle = "2006-01-02"
+	dateFormatList = "2006-01-02"
 
-    [languages.en.params.logo]
-      logoText = "Colinx Blog"
-      logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
+		[languages.en.params.logo]
+		logoText = "Colinx Blog"
+		logoHomeLink = "/"
+		# or
+		#
+		# path = "/img/your-example-logo.svg"
+		# alt = "Your example logo alt text"
 
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "archive"
-        name = "Archive"
-        url = "/archive"
-      [[languages.en.menu.main]]
-        identifier = "categories"
-        name = "Categories"
-        url = "/categories"
-      [[languages.en.menu.main]]
-        identifier = "tags"
-        name = "Tags"
-        url = "/tags"
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/aboutme"
+[languages.en.menu]
+	[[languages.en.menu.main]]
+	identifier = "archive"
+	name = "Archive"
+	url = "/archive"
+	[[languages.en.menu.main]]
+	identifier = "categories"
+	name = "Categories"
+	url = "/categories"
+	[[languages.en.menu.main]]
+	identifier = "tags"
+	name = "Tags"
+	url = "/tags"
+	[[languages.en.menu.main]]
+	identifier = "about"
+	name = "About"
+	url = "/aboutme"
 
-  [languages.zh-cn]
-    title = "Colinx Blog"
-    subtitle = "Colin的个人博客"
-    keywords = "Colin,个人博客"
-    copyright = ""
-    menuMore = "显示更多"
-    writtenBy = "作者"
-    readMore = "点击阅读"
-    readOtherPosts = "阅读更多"
-    newerPosts = "上一页"
-    olderPosts = "下一页"
-    minuteReadingTime = "分钟"
-    dateFormatSingle = "2006-01-02"
-    dateFormatList = "2006-01-02"
+[languages.zh-cn]
+title = "Colinx Blog"
+subtitle = "Colin的个人博客"
+keywords = "Colin,个人博客"
+copyright = ""
+menuMore = "显示更多"
+writtenBy = "作者"
+readMore = "点击阅读"
+readOtherPosts = "阅读更多"
+newerPosts = "上一页"
+olderPosts = "下一页"
+minuteReadingTime = "分钟"
+dateFormatSingle = "2006-01-02"
+dateFormatList = "2006-01-02"
 
-    [languages.zh-cn.params.logo]
-      logoText = "Colinx Blog"
-      logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
+	[languages.zh-cn.params.logo]
+	logoText = "Colinx Blog"
+	logoHomeLink = "/"
+	# or
+	#
+	# path = "/img/your-example-logo.svg"
+	# alt = "Your example logo alt text"
 
-    [languages.zh-cn.menu]
-      [[languages.zh-cn.menu.main]]
-        identifier = "archive"
-        name = "归档"
-        url = "/archive"
-      [[languages.zh-cn.menu.main]]
-        identifier = "categories"
-        name = "分类"
-        url = "/categories"
-      [[languages.zh-cn.menu.main]]
-        identifier = "tags"
-        name = "标签"
-        url = "/tags"
-      [[languages.zh-cn.menu.main]]
-        identifier = "about"
-        name = "关于"
-        url = "/aboutme"
-      [[languages.zh-cn.menu.main]]
-        identifier = "rss"
-        name = "RSS"
-        url = "/index.xml"
-      
+[languages.zh-cn.menu]
+	[[languages.zh-cn.menu.main]]
+	identifier = "archive"
+	name = "归档"
+	url = "/archive"
+	[[languages.zh-cn.menu.main]]
+	identifier = "categories"
+	name = "分类"
+	url = "/categories"
+	[[languages.zh-cn.menu.main]]
+	identifier = "tags"
+	name = "标签"
+	url = "/tags"
+	[[languages.zh-cn.menu.main]]
+	identifier = "about"
+	name = "关于"
+	url = "/aboutme"
+	[[languages.zh-cn.menu.main]]
+	identifier = "rss"
+	name = "RSS"
+	url = "/index.xml"
