@@ -4,7 +4,7 @@ date: 2021-01-09
 lastmod: 2021-01-10
 description: 折腾了自己的专属RSS信息流，每天都能从那些高质量的信息源中获得不少干货知识，一般就会顺手收藏一下。有一天突然想起自己收藏的那些文章，本身不就是经过二次筛选的高质量文章吗？于是便在构想能不能通过某种方式将这个信息源也公开出来，一方面是记录，另一方面也是间接地展示自己。恰逢遇见JAMStack，最近在国外非常火，国内的阿里和腾讯也在跟进，搞静态托管那一套。经多方物色，最终确定基于Pocket API+Gatsby来构建这样一个自己的「网络日志」。
 categories:
-- 杂记
+- 教程
 tags:
 - 技术
 - JAMStack
@@ -49,7 +49,7 @@ JAMStack是一种新颖的网站架构，与传统的服务端渲染和近些年
 1. 我在其他地方看到不错的文章，将其收藏到Pocket
 2. 定时任务，从`Pocket API`获取文章数据，交给Gatsby生成站点
 3. 自动部署，将生成的静态文件部署到CDN
-4. [reading.colinx.one](reading.colinx.one)站点主页就会出现我收藏的文章啦
+4. [reading.colinx.one](https://reading.colinx.one)站点主页就会出现我收藏的文章啦
 
 
 
@@ -59,7 +59,7 @@ JAMStack是一种新颖的网站架构，与传统的服务端渲染和近些年
 
 ## 总结
 
-项目已经开源，地址在https://github.com/Colin-XKL/Colinx-Reading.git。你也可以去申请自己的Pocket API然后部署你自己的站点。
+项目已经开源，地址在[https://github.com/Colin-XKL/Colinx-Reading.git](https://github.com/Colin-XKL/Colinx-Reading)。你也可以去申请自己的Pocket API然后部署你自己的站点。
 
 初始尝试JAMStack，感觉对于博客、文档这类的站点会非常友好，国外比较火的像Shopify这种的无头电商也不错，国内的碍于国情应该不大可能了。
 
