@@ -87,23 +87,29 @@ dateFormatList = "2006-01-02"
 	# alt = "Your example logo alt text"
 
 [languages.zh-cn.menu]
+
 	[[languages.zh-cn.menu.main]]
 	identifier = "archive"
-	name = "归档"
+	name = "文章归档"
 	url = "/archive"
+	weight = 1
 	[[languages.zh-cn.menu.main]]
 	identifier = "categories"
 	name = "分类"
 	url = "/categories"
+	weight = 2
 	[[languages.zh-cn.menu.main]]
 	identifier = "tags"
-	name = "标签"
+	name = "Tags"
 	url = "/tags"
+	weight = 3
 	[[languages.zh-cn.menu.main]]
 	identifier = "about"
 	name = "关于"
 	url = "/aboutme"
+	weight = 5
 	[[languages.zh-cn.menu.main]]
 	identifier = "rss"
 	name = "RSS"
 	url = "/index.xml"
+	weight = 10
