@@ -1,0 +1,31 @@
+name: Check and correct img CDN URLs
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  check-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Find and Replace Release
+        uses: jacobtomlinson/gha-find-replace@0.1.1
+        with:
+          find: "blog-1301127393.cos.ap-shanghai.myqcloud.com"
+          replace: "blog-1301127393.file.myqcloud.com"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Change img CDN URL"
+          title: "Update imgs' CDN URL"
+          labels: "URL"
+          author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          branch: "update-img-url"
+          body: "Some imgs' URL need to be updated."
