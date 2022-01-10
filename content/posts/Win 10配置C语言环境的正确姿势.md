@@ -65,7 +65,7 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164821.png" alt="image-20201224235413884" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164821.png" alt="image-20201224235413884" style="zoom:50%;" />
 
 
 
@@ -73,7 +73,7 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164829.png" alt="image-20201224235436360" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164829.png" alt="image-20201224235436360" style="zoom:50%;" />
 
 
 
@@ -83,13 +83,13 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 网络条件不好的情况下，半分钟以内就会报错说网络连接失败。不过不用担心，接下来可以自己填写国内镜像地址。
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164833.png" alt="image-20201224235644342" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164833.png" alt="image-20201224235644342" style="zoom:50%;" />
 
 在User URL的输入框输入`https://mirrors.tuna.tsinghua.edu.cn/cygwin/`并点击Add添加。之后点击下一步继续。
 
 
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164836.png" alt="image-20201224235719679" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164836.png" alt="image-20201224235719679" style="zoom:50%;" />
 
 
 
@@ -97,13 +97,13 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 之后会进入一个选择界面。这里选择要安装的组件。我们只需要C语言的编译器，这里在搜索框内输入`gcc`，然后在下方找到`gcc-core`  和   `gcc-g++`，点击右侧的三角形打开下拉菜单，选择9开头的版本。如下图所示。
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164839.png" alt="image-20201225000518139" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164839.png" alt="image-20201225000518139" style="zoom:50%;" />
 
 
 
 选择完成后，一路点击下一步安装。如果出现如下的警告信息，直接用默认的设置，点下一步继续就可以了。
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164842.png" alt="image-20201225000604625" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164842.png" alt="image-20201225000604625" style="zoom:50%;" />
 
 
 
@@ -115,51 +115,51 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 在开始菜单中找到`Windows系统` - 控制面板。如果这里没有的话，按`Windows徽标键`+`S`可以呼出搜索面板，可以在此搜索控制面板菜单项。
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164856.png" alt="image-20201227152139118" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164856.png" alt="image-20201227152139118" style="zoom:50%;" />
 
 在控制面板主页找到系统与安全。
 
-![image-20201227152347064](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164859.png)
+![image-20201227152347064](https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164859.png)
 
 或者如果你的控制面板打开不是上面的布局而是下面这种布局的话，找到系统菜单。
 
-![image-20201227152420458](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164903.png)
+![image-20201227152420458](https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164903.png)
 
 进入如下的页面，点击高级系统设置。
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164910.png" alt="image-20201225001127874" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164910.png" alt="image-20201225001127874" style="zoom:50%;" />
 
 切换到高级选项卡，点击下方的环境变量菜单
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164913.png" alt="image-20201225000925342" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164913.png" alt="image-20201225000925342" style="zoom:50%;" />
 
 在用户变量中，点击`Path`，点击下方编辑按钮进行编辑
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164916.png" alt="image-20201225000949291" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164916.png" alt="image-20201225000949291" style="zoom:50%;" />
 
 输入Cygwin安装路径下的bin目录。如果你之前没有自定义安装路径，直接设置如图即可。否则设置为你自定义的路径。
 
 **注意：这一步只要添加这一个就好**，不要看我截图里面的很干净，就把其他的都删了
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164919.png" alt="image-20201225001045854" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164919.png" alt="image-20201225001045854" style="zoom:50%;" />
 
 一路点击确定。修改完之后重启下电脑确保改动生效。
 
 在PowerShell中或者命令提示符中输入gcc并回车。如果显示no input files则表示安装成功。
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164921.png" alt="image-20201225001234917" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164921.png" alt="image-20201225001234917" style="zoom:50%;" />
 
 ### 配置编辑器
 
 安装完了编译器，可以先来Hello world了
 
-![image-20201225001723920](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164924.png)
+![image-20201225001723920](https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164924.png)
 
 
 
 按住Shift键，右键点击文件夹空白处，会出现在此处打开Powershell窗口的选项。
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164932.png" alt="image-20201225001744160" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164932.png" alt="image-20201225001744160" style="zoom:50%;" />
 
 
 
@@ -167,7 +167,7 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 输入`./hello.exe`即可执行该exe文件。
 
-![image-20201225002338213](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227164937.png)
+![image-20201225002338213](https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164937.png)
 
 
 
@@ -201,41 +201,41 @@ https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
 
 
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227165016.png" alt="image-20201227155805507" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165016.png" alt="image-20201227155805507" style="zoom:50%;" />
 
 
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227165019.png" alt="image-20201227155937465" style="zoom:50%;" />
-
-
-
-
-
-![image-20201227160036085](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227165022.png)
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165019.png" alt="image-20201227155937465" style="zoom:50%;" />
 
 
 
 
 
-![image-20201227160129001](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227165026.png)
+![image-20201227160036085](https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165022.png)
 
 
 
-![image-20201227160209263](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227165029.png)
+
+
+![image-20201227160129001](https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165026.png)
 
 
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227165032.png" alt="image-20201227160939375" style="zoom:50%;" />
+![image-20201227160209263](https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165029.png)
 
 
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227165035.png" alt="image-20201227161003478" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165032.png" alt="image-20201227160939375" style="zoom:50%;" />
+
+
+
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165035.png" alt="image-20201227161003478" style="zoom:50%;" />
 
 
 
 在输入栏中，在当前选项卡为**用户**的情况下，输入`run`并按回车进行搜索。修改`Run in Terminal`和 `Save File Before Run`的设置项。
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227165038.png" alt="image-20201227161205762" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165038.png" alt="image-20201227161205762" style="zoom:50%;" />
 
 
 
@@ -245,20 +245,20 @@ https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
 
 点击左侧第一个按钮，来到文件管理面板。点击打开文件夹按钮，打开一个空白的文件夹（任意文件夹都可以，只是保存你代码的地方，一般一个干净整洁的新文件夹为宜）
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227165059.png" alt="image-20201227163528187" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165059.png" alt="image-20201227163528187" style="zoom:50%;" />
 
 
 打开文件夹后，在空白处单击右键，新建一个文件，文件名输入为`hello.c`
 
 
-![image-20201227164010460](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227165107.png)
+![image-20201227164010460](https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165107.png)
 
 
 
 点击右上角的三角形按钮即可自动编译运行你的C语言代码。在窗口下方的终端即可看到输出的`Hello,C!`字样。
 
 
-<img src="https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20201227165112.png" alt="image-20201227164041803" style="zoom:50%;" />
+<img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165112.png" alt="image-20201227164041803" style="zoom:50%;" />
 
 
 
