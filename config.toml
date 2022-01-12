@@ -4,6 +4,7 @@ defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
 theme = "hello-friend"
 paginate = 10
+enableRobotsTXT = true
 
 [markup.goldmark.renderer]
 unsafe = true #避免MarkDown内嵌的HTML被优化掉，尤其是Typora缩放过的图片
@@ -25,7 +26,7 @@ rssFullText = true
 	[languages.en]
 	title = "Colinx Blog"
 	subtitle = "Colin's Blog"
-	keywords = ""
+	keywords = "Colin,Blog"
 	copyright = ""
 	menuMore = "Show more"
 	writtenBy = "Written by"
