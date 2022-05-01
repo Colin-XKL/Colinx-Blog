@@ -18,6 +18,8 @@ jobs:
         with:
           find: "blog-1301127393.cos.ap-shanghai.myqcloud.com"
           replace: "blog-1301127393.file.myqcloud.com"
+          include: "**/*.md"
+
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
