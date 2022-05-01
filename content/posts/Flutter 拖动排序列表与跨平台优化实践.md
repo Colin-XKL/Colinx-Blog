@@ -10,7 +10,7 @@ tags:
 - Flutter
 ---
 
-# Flutter 拖动排序列表与跨平台优化实践
+<!-- # Flutter 拖动排序列表与跨平台优化实践 -->
 
 
 
@@ -46,7 +46,7 @@ Flutter中实现拖动排序的列表非常简单，使用官方的`ReorderableL
 
 
 
-![截屏2021-03-30 23.04.59](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20210330234001.png)
+![截屏2021-03-30 23.04.59](https://blog-1301127393.file.myqcloud.com/BlogImgs/20210330234001.png)
 
 虽然可以实现拖动了，但是右边有一个按钮很碍眼。不过这个是用来控制拖动的，鼠标移上去才能触发拖动。
 
@@ -65,7 +65,7 @@ Flutter中实现拖动排序的列表非常简单，使用官方的`ReorderableL
 
 不过相应的，ListTile的`onLongPress`就不能再有响应了。刚好今天完成了滑动删除的实现，现在列表也的删除、排序已经高度可用且多平台统一了。
 
-![截屏2021-03-30 23.21.32](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20210330233350.png)
+![截屏2021-03-30 23.21.32](https://blog-1301127393.file.myqcloud.com/BlogImgs/20210330233350.png)
 
 附相关代码实现：
 
