@@ -1,8 +1,6 @@
-name: SEO check
+name: MD SEO check
 
-on:
-  push:
-    branches: [ master ]
+on: [pull_request]
 
 jobs:
   seocheck:
