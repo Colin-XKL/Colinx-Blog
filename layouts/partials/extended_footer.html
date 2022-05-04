@@ -49,18 +49,3 @@
         color: #fff;
     }
 </style>
-
-<!-- Sentry -->
-<script src="https://browser.sentry-cdn.com/6.15.0/bundle.tracing.min.js"
-    integrity="sha384-1k7XKRQgqjUbNyG2sI+qsY8HTHMOeLdycMx6hoGuNSANZ3WrMa3LXkr+M4t+SIpF"
-    crossorigin="anonymous"></script>
-<script>
-    Sentry.init({
-        dsn: "https://446fb53b106744b1b70e1074e68a5e71@o850059.ingest.sentry.io/6077493",
-        integrations: [new Sentry.Integrations.BrowserTracing()],
-        // Set tracesSampleRate to 1.0 to capture 100%
-        // of transactions for performance monitoring.
-        // We recommend adjusting this value in production
-        tracesSampleRate: 1.0,
-    });
-</script>
