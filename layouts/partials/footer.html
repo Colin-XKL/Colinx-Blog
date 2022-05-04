@@ -7,20 +7,6 @@
 "></div>
 <div class='js-toc'></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
-<script>
-    tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: '.js-toc',
-        // Where to grab the headings to build the table of contents.
-        contentSelector: '.post-content',
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: 'h1, h2, h3',
-        // For headings inside relative or absolute positioned containers within content.
-        hasInnerContainers: true,
-    });
-</script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
 <style>
     @media (min-width: 1560px) {
         .js-toc {
@@ -119,28 +105,22 @@
     </div>
 </footer>
 
-<script src="{{ "assets/main.js" | absURL }}"></script>
 <script async src="{{ "assets/prism.js" | absURL }}"></script>
-
+<script src="{{ "assets/main.js" | absURL }}"></script>
 <script>
-    meta = document.querySelectorAll('.post:not(.on-list) .post-meta')[0];
-    var visitors = `<span id="busuanzi_container_page_pv" style='display:none'> 浏览：<span id="busuanzi_value_page_pv"></span>次</span>`
+    let meta = document.querySelectorAll('.post:not(.on-list) .post-meta')[0];
+    const visitors = `<span id="busuanzi_container_page_pv" style='display:none'> 浏览：<span id="busuanzi_value_page_pv"></span>次</span>`
     if (meta) meta.innerHTML = meta.innerHTML + visitors
 </script>
 
-
-<!-- Sentry -->
-<script src="https://browser.sentry-cdn.com/6.15.0/bundle.tracing.min.js"
-    integrity="sha384-1k7XKRQgqjUbNyG2sI+qsY8HTHMOeLdycMx6hoGuNSANZ3WrMa3LXkr+M4t+SIpF"
-    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
 <script>
-    Sentry.init({
-        dsn: "https://446fb53b106744b1b70e1074e68a5e71@o850059.ingest.sentry.io/6077493",
-        integrations: [new Sentry.Integrations.BrowserTracing()],
-        // Set tracesSampleRate to 1.0 to capture 100%
-        // of transactions for performance monitoring.
-        // We recommend adjusting this value in production
-        tracesSampleRate: 1.0,
+    pangu.spacingElementByClassName('post');
+    pangu.spacingElementByTagName('p');
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // listen to any DOM change and automatically perform spacing via MutationObserver()
+        pangu.autoSpacingPage();
     });
 </script>
 

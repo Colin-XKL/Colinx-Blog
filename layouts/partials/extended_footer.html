@@ -17,6 +17,21 @@
     }
 </style> -->
 
+<!-- toc -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
 
 <style>
     ::selection {
@@ -34,3 +49,18 @@
         color: #fff;
     }
 </style>
+
+<!-- Sentry -->
+<script src="https://browser.sentry-cdn.com/6.15.0/bundle.tracing.min.js"
+    integrity="sha384-1k7XKRQgqjUbNyG2sI+qsY8HTHMOeLdycMx6hoGuNSANZ3WrMa3LXkr+M4t+SIpF"
+    crossorigin="anonymous"></script>
+<script>
+    Sentry.init({
+        dsn: "https://446fb53b106744b1b70e1074e68a5e71@o850059.ingest.sentry.io/6077493",
+        integrations: [new Sentry.Integrations.BrowserTracing()],
+        // Set tracesSampleRate to 1.0 to capture 100%
+        // of transactions for performance monitoring.
+        // We recommend adjusting this value in production
+        tracesSampleRate: 1.0,
+    });
+</script>
