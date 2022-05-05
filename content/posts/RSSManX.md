@@ -12,14 +12,10 @@ tags:
   - Github
   - 代理
 ---
-
 ![logo](https://cdn.jsdelivr.net/gh/Colin-XKL/RSSmanX/.github/logo.png)
 
-![author](https://img.shields.io/badge/author-Colin-blue)
-![license](https://img.shields.io/github/license/Colin-XKL/RSSmanX)
-![release](https://img.shields.io/github/v/release/Colin-XKL/RSSmanX)
-![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FColin-XKL%2FRSSmanX.svg?type=shield)
-![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
+![license](https://img.shields.io/github/license/Colin-XKL/RSSmanX)  
+![release](https://img.shields.io/github/v/release/Colin-XKL/RSSmanX)  
 
 [中文说明](https://github.com/Colin-XKL/RSSmanX/blob/master/README-zh_cn.md) ｜ [English](https://github.com/Colin-XKL/RSSmanX/)
 
