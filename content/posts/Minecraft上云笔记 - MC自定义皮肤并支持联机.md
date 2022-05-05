@@ -4,7 +4,7 @@ date: 2021-02-22
 lastmod: 2021-02-22
 description: Minecraft上云笔记 - MC自定义皮肤并支持联机
 categories:
-- 教程
+- 技术
 - 指南
 tags:
 - Java
@@ -14,8 +14,6 @@ tags:
 - 我的世界
 - 游戏
 - 服务器
-
-
 
 ---
 

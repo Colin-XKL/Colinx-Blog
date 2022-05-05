@@ -4,7 +4,7 @@ date: 2021-05-08
 lastmod: 2021-05-08
 description: 网站没有源，海外站的源看不了？这也许是第一个自带海外加速的RSS解决方案
 categories:
-  - 教程
+  - 技术
   - 指南
 tags:
   - RSS

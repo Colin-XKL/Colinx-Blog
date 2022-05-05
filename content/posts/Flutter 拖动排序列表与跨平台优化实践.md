@@ -4,7 +4,7 @@ date: 2021-03-30
 lastmod: 2021-03-30
 description: Flutter 拖动排序列表与跨平台优化实践
 categories:
-- 教程
+- 技术
 tags:
 - 技术
 - Flutter

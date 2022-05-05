@@ -4,7 +4,7 @@ date: 2020-12-18
 lastmod: 2020-12-19
 description: Mac 平台配置C/Python/Java学习环境
 categories:
-- 教程
+- 技术
 - 指南
 tags:
 - C

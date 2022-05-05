@@ -4,7 +4,7 @@ date: 2021-02-07
 lastmod: 2021-02-07
 description: Minecraft上云笔记 - MC服务器快速搭建&MOD推荐&性能优化。MC快速上云，学生机轻松带动，三五好友，畅快联机
 categories:
-- 教程
+- 技术
 - 指南
 tags:
 - Java
