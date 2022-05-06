@@ -1,51 +1,12 @@
-<!-- link style -->
-<!-- <style>
-    .post-content a {
-        transition: background-size 0.1s ease;
-        background: linear-gradient(to bottom, transparent 62%, #fff56644 0) center center/0% 75% no-repeat;
-        color: #52c41a;
-        cursor: pointer;
-    }
+<script src="{{ "assets/main.js" | absURL }}"></script>
 
-    .post-content a:hover {
-        background-size: 100% 100%;
-        color: #389e0d;
-    }
+<script src="https://cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+<script >
+    pangu.spacingElementByClassName('post');
+    pangu.spacingElementByTagName('p');
 
-    .post-content a:active {
-        background-size: 80% 100%;
-    }
-</style> -->
-
-<!-- toc -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
-<script>
-    tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: '.js-toc',
-        // Where to grab the headings to build the table of contents.
-        contentSelector: '.post-content',
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: 'h1, h2, h3',
-        // For headings inside relative or absolute positioned containers within content.
-        hasInnerContainers: true,
+    document.addEventListener('DOMContentLoaded', () => {
+        // listen to any DOM change and automatically perform spacing via MutationObserver()
+        pangu.autoSpacingPage();
     });
 </script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
-
-<style>
-    ::selection {
-        background: #b5b5b5;
-        color: #fff;
-    }
-
-    ::-moz-selection {
-        background: #b5b5b5;
-        color: #fff;
-    }
-
-    ::-webkit-selection {
-        background: #b5b5b5;
-        color: #fff;
-    }
-</style>
