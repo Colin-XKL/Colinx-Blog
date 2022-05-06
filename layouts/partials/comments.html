@@ -33,9 +33,21 @@
         gitalk.render('gitalk-container');
     }
 </script>
-<script defer src="{{ "assets/prism.js" | absURL }}"></script>
+<script defer 
+    onerror="fallbackJSloader('https://cdn.staticaly.com/gh/panr/hugo-theme-hello-friend/master/static/assets/prism.js')"
+    src="{{ "assets/prism.js" | absURL }}"></script>
 
-<script defer onload="tocbot_init()" src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
-<script defer onload="init_gitalk()" src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+<script defer onload="tocbot_init()"
+    onerror="fallbackJSloader('https://cdn.staticfile.org/tocbot/4.9.1/tocbot.min.js','tocbot_init')"
+    src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<link rel="stylesheet" 
+onerror="fallbackCSSloader('https://cdn.staticfile.org/tocbot/4.9.1/tocbot.css')"
+
+href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+<script defer onload="init_gitalk()"
+    onerror="fallbackJSloader('https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js','init_gitalk')"
+    src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<link rel="stylesheet" 
+    onerror="fallbackCSSloader('https://cdn.staticfile.org/gitalk/1.7.2/gitalk.css')"
+    href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+<!-- no min css version fallback for gitalk css -->
