@@ -7,34 +7,35 @@
     if (meta) meta.innerHTML = meta.innerHTML + visitors
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
-<script >
-    tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: '.js-toc',
-        // Where to grab the headings to build the table of contents.
-        contentSelector: '.post-content',
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: 'h1, h2, h3',
-        // For headings inside relative or absolute positioned containers within content.
-        hasInnerContainers: true,
-    });
+<script>
+    function tocbot_init() {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.js-toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.post-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+    }
+    function init_gitalk() {
+        const gitalk = new Gitalk({
+            clientID: '94eae56b89dcc480bf4d',
+            clientSecret: '1e4218c0293a998a9483ab09ba9ace46cabc76b3',
+            repo: 'Colinx-Blog',      // The repository of store comments,
+            owner: 'Colin-XKL',
+            admin: ['Colin-XKL'],
+            id: decodeURI(location.pathname),  // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        });
+        gitalk.render('gitalk-container');
+    }
 </script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
-
 <script defer src="{{ "assets/prism.js" | absURL }}"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script >
-    const gitalk = new Gitalk({
-        clientID: '94eae56b89dcc480bf4d',
-        clientSecret: '1e4218c0293a998a9483ab09ba9ace46cabc76b3',
-        repo: 'Colinx-Blog',      // The repository of store comments,
-        owner: 'Colin-XKL',
-        admin: ['Colin-XKL'],
-        id: decodeURI(location.pathname),  // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-    gitalk.render('gitalk-container');
-</script>
+<script defer onload="tocbot_init()" src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+<script defer onload="init_gitalk()" src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">

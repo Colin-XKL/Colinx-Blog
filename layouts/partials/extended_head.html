@@ -1,21 +1,25 @@
 <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
     <text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
-<script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script>
 <script>
-    const aegis = new Aegis({
-        id: 'gQ7V9SgjxZdOm1gy35', // 上报 id
-        // uin: 'xxx', // 用户唯一 ID（可选）
-        reportApiSpeed: true, // 接口测速
-        reportAssetSpeed: true, // 静态资源测速
-        spa: true // spa 应用页面跳转的时候开启 pv 计算
-    });
+    function loadAgies() {
+        console.log('loaded');
+        const aegis = new Aegis({
+            id: 'gQ7V9SgjxZdOm1gy35', // 上报 id
+            // uin: 'xxx', // 用户唯一 ID（可选）
+            reportApiSpeed: true, // 接口测速
+            reportAssetSpeed: true, // 静态资源测速
+            spa: true // spa 应用页面跳转的时候开启 pv 计算
+        });
+    }
 </script>
+
+<script async onload="loadAgies()" src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="//api.github.com" />
 <link rel="dns-prefetch" href="//avatars.githubusercontent.com" />
 
-<style type="text/css">body {font-weight: unset !important;font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif!important;}</style>
-<style type="text/css">.framed{width: 100%;} .framed .h-anchor{display: none;}</style>
+<style type="text/css">body {font-weight: unset !important;font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif!important;}
+.framed{width: 100%;} .framed .h-anchor{display: none;}</style>

@@ -1,12 +1,14 @@
-<script src="{{ "assets/main.js" | absURL }}"></script>
+<script async src="{{ " assets/main.js" | absURL }}"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
-<script >
-    pangu.spacingElementByClassName('post');
-    pangu.spacingElementByTagName('p');
+<script>
+    function panguSpaing() {
+        pangu.spacingElementByClassName('post');
+        pangu.spacingElementByTagName('p');
 
-    document.addEventListener('DOMContentLoaded', () => {
-        // listen to any DOM change and automatically perform spacing via MutationObserver()
-        pangu.autoSpacingPage();
-    });
+        document.addEventListener('DOMContentLoaded', () => {
+            // listen to any DOM change and automatically perform spacing via MutationObserver()
+            pangu.autoSpacingPage();
+        });
+    }
 </script>
+<script async onload="panguSpaing()" src="https://cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
