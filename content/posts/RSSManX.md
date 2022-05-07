@@ -25,7 +25,7 @@ tags:
 
 **Feature： 简单一键部署，常用组件支持，自动更新支持，服务健康自检支持，海外站点 RSS 解锁**
 
-## 快速开始
+### 快速开始
 
 (若已安装 `docker` 和 `docker-compose`)
 
@@ -33,7 +33,7 @@ tags:
 mkdir RSSmanX && cd $_ && wget https://cdn.jsdelivr.net/gh/Colin-XKL/RSSmanX/docker-compose.yml && sudo docker-compose up -d
 ```
 
-# 说明
+## 说明
 
 本项目旨在为 RSS 的同好提供一个方便地搭建自己的 RSS 服务的捷径。毕竟不是所有 RSS 爱好者都懂代码 😂。如果你想快速地搭建自己的 RSS 服务，能够有 RSS 订阅管理、RSS 在线阅读界面，进阶功能包括服务健康自检、海外站点 RSS 解锁等。希望订阅国内外的各大网站的 RSS 信息源又不想跟着网上漫天飞的教程瞎折腾的话，那么你可以使用本仓库的脚本快速完成安装部署。
 
@@ -67,15 +67,15 @@ mkdir RSSmanX && cd $_ && wget https://cdn.jsdelivr.net/gh/Colin-XKL/RSSmanX/doc
 
 选择对应版本下载到本地后都 compose 文件需要重命名为标准的`docker-compose.yml`才可使用
 
-# 安装说明
+## 安装说明
 
-## 需求
+### 需求
 
 - 一台 Linux 系统的服务器
 
   > 本文以腾讯云 Ubuntu 18.04 系统的服务器为例，其他云服务商的没差，系统为 CentOS 的会有点差异
 
-## 依赖项
+### 依赖项
 
 - docker
 - docker-compose
@@ -107,7 +107,7 @@ sudo apt install docker-compose
 - https://docs.docker.com/engine/install/
 - https://docs.docker.com/compose/install/
 
-## 如何安装
+### 如何安装
 
 安装好了 `docker` 和 `docker-compose` 后可以执行文章开头的快速开始的指令。或者可以按照下面的步骤手动操作：
 
@@ -129,7 +129,7 @@ sudo apt install docker-compose
 - TTRSS 相关文档 [https://ttrss.henry.wang/](https://ttrss.henry.wang/)
 - RSSHub 相关文档 [https://docs.rsshub.app/](https://docs.rsshub.app/)
 
-## 功能模块介绍
+### 功能模块介绍
 
 **Tiny Tiny RSS**
 RSS 订阅管理与在线阅读工具
@@ -161,7 +161,7 @@ RSS 订阅管理与在线阅读工具
 **Clash**
 智能路由与正向代理工具，用于解锁海外站点及提供海外 RSS 源的加速
 
-# Acknowledgement
+## Acknowledgement
 
 - [Tiny tiny RSS](https://tt-rss.org/)
 - [OpenCC](https://github.com/BYVoid/OpenCC)
@@ -170,11 +170,11 @@ RSS 订阅管理与在线阅读工具
 - [RSShub](https://github.com/DIYgod/RSSHub)
 - [Awesome TTRSS](https://github.com/HenryQW/Awesome-TTRSS)
 
-# License
+## License
 
 GPL-3.0
 
-# Changelogs
+## Changelogs
 
 - 2020-07-07 v1.0 First release
 - 2020-07-14 v1.1 Update quick start shell script
