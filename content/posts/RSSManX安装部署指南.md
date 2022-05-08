@@ -117,7 +117,7 @@ sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 ### 安装或更新docker-compose
 
-docker-compose目前有两个主要版本V1和V2，都是可用的。V1使用Python编写，使用时类似`sudo docker-compose up -d`，V2则是Golang编写，与前者高度兼容，但是是作为docker的插件安装的，使用时类似`sudo docker compose up -d`，中间的短杠不需要了。
+docker-compose目前有两个主要版本V1和V2，都是可用的。V1使用Python编写，使用时类似`sudo docker-compose up -d`，V2则是Golang编写，与前者高度兼容，但是是作为docker的插件存在的，安装方式不一样。使用命令类似`sudo docker compose up -d`，中间的短杠不需要了。
 
 如果是按照上文的步骤安装的docker，那么默认已经安装了docker compose v2，可以通过`docker compose version`查看版本
 
@@ -126,7 +126,7 @@ docker-compose目前有两个主要版本V1和V2，都是可用的。V1使用Pyt
 Docker Compose version v2.3.3
 ```
 
-如果需要是安装的比较老的v1版本的docker-compose，想要单纯更新docker-compose而又不想动其他东西的话，可以更新安装v1版本的docker-compose。
+如果需要是安装的比较老的v1版本的docker-compose，想要单纯更新docker-compose而又不想动其他东西的话，可以使用以下命令进行更新，安装v1版docker-compose的最新版本。
 
 首先删除老旧版本（如果有的话）
 
