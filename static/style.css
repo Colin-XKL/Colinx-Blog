@@ -8,7 +8,7 @@
 }
 
 /* toc style */
-@media (min-width: 1560px) {
+@media (min-width: 1500px) {
   .js-toc {
     display: block !important;
   }
