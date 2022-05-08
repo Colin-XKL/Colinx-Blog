@@ -18,7 +18,7 @@ RSS Man X是我两年前入坑RSS后，为了方便更多人更方便地使用RS
 
 RSS Man X会利用到docker和docker-compose，首先需要确保你的服务器正确安装了这些软件
 
-## 0x00. Docker环境准备
+## 1. Docker环境准备
 
 检查服务器中是否已经安装了docker和docker-compose，并检查他们的版本是否太老。比如输入`docker --version`来检查docker的版本
 
@@ -36,7 +36,7 @@ docker-compose version 1.25.0, build unknown
 
 如果上面命令执行后提示`command not found`，那么说明并没有安装对应的软件包（或是安装的路径并不在当前用户的PATH变量中，尝试切换到root操作，详细的原因和解决方法见后文）
 
-### Ubuntu/Debian安装Docker
+### 1.1 Ubuntu/Debian安装Docker
 
 ubuntu和debian主要是用apt安装和管理软件包，可以使用以下命令来安装，根据实际情况选择是否要加sudo。下面以Ubuntu为例。Debian下的安装略有不同，可以参见[Docker官方文档](https://docs.docker.com/engine/install/debian/)，以及[清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)。其中`download.docker.com`连接不同的可以尝试讲域名部分更换为[中科大提供的镜像](https://mirrors.ustc.edu.cn/help/docker-ce.html)地址`mirrors.ustc.edu.cn/docker-ce`
 
@@ -80,7 +80,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
-### CentOS/Fedora安装Docker
+### 1.2 CentOS/Fedora安装Docker
 
 CentOS和Fedora使用yum安装和管理软件包，新版本则是使用dnf，不过两者功能一致且高度兼容。下面以CentOS为例，Fedora可参见[官方文档](https://docs.docker.com/engine/install/fedora/)或[清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
 
@@ -115,7 +115,7 @@ sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 
 
-### 安装或更新docker-compose
+### 1.3 安装或更新docker-compose
 
 docker-compose目前有两个主要版本V1和V2，都是可用的。V1使用Python编写，使用时类似`sudo docker-compose up -d`，V2则是Golang编写，与前者高度兼容，但是是作为docker的插件存在的，安装方式不一样。使用命令类似`sudo docker compose up -d`，中间的短杠不需要了。
 
@@ -163,7 +163,7 @@ sudo yum install python3-pip
 ```
 
 
-### 为Docker配置镜像源
+### 1.4 为Docker配置镜像源
 
 如果Docker下载镜像非常慢，你可能需要单独配置一下Docker的镜像源。==注意：Docker安装软件源的镜像和Docker镜像或者说映像的国内源并不是同一个，英文表述可能更准确一些：==
 
@@ -185,7 +185,7 @@ sudo yum install python3-pip
 
 
 
-## 安装RSS Man X
+## 2. 安装RSS Man X
 
 
 
