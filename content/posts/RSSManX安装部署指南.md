@@ -153,7 +153,14 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```shell
 python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 ```
+如果提示pip命令不存在需要先安装一下
+```shell
+# Ubuntu/Debian
+sudo apt install python3-pip
 
+# CentOS/Fedora
+sudo yum install python3-pip
+```
 
 
 ### 为Docker配置镜像源
@@ -167,10 +174,10 @@ python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 
 ```json
 {
-    "registry-mirrors": [
-        "https://mirror.ccs.tencentyun.com",
-        "https://docker.mirrors.ustc.edu.cn"
-    ]
+  "registry-mirrors": [
+    "https://mirror.ccs.tencentyun.com",
+    "https://docker.mirrors.ustc.edu.cn"
+  ]
 }
 ```
 
