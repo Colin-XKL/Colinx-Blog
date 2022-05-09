@@ -209,12 +209,6 @@ href属性里面的内容是他的链接，title属性里面的内容则是他�
 
 
 
-
-
-
-
-
-
 ## 使用PhantomJS为动态页面生成RSS
 
 首先需要到[Phantom Js Cloud的官网](https://phantomjscloud.com)注册一个账户，每个账户官方提供了一定的免费额度，每天大概可以爬取500个页面，对于做RSS来说妥妥的够用了。注册之后可以得到一个API KEY，这个待会会使用到。
@@ -243,7 +237,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like 
 
 之后创建一个WebSite Agent，Source Agent设置为上面的Phantom JS Cloud Agent，然后稍微改一下url的部分
 
-```
+```json
 {
   "expected_update_period_in_days": "2",
   "url_from_event": "{{url}}",
@@ -305,4 +299,4 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like 
 
 * [Huginn官方文档](https://github.com/huginn/huginn/wiki/)
 * [Liquid模板引擎语法官方文档](https://shopify.dev/api/liquid/filters/)
-* RSS Man X部署指南
+* [RSS Man X部署指南](https://blog.colinx.one/posts/rssmanx%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/)
