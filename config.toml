@@ -40,12 +40,10 @@ canonicalRelLinkBase = 'https://blog.colinx.one/'
 	minuteReadingTime = "min read"
 	dateFormatSingle = "2006-01-02"
 	dateFormatList = "2006-01-02"
-
 		[languages.en.params.logo]
 		logoText = "Colinx Blog"
 		logoHomeLink = "/"
 		# or
-		#
 		# path = "/img/your-example-logo.svg"
 		# alt = "Your example logo alt text"
 
