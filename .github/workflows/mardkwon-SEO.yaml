@@ -1,8 +1,6 @@
-name: SEO check
+name: MD SEO check
 
-on:
-  push:
-    branches: [ master ]
+on: [pull_request]
 
 jobs:
   seocheck:
@@ -13,7 +11,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Markdown SEO Check
-        uses: zentered/markdown-seo-check@v1.1.0
+        uses: zentered/markdown-seo-check@v1.1.5
         with:
           max_title_length: 70
           max_description_length: 150

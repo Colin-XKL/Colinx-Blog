@@ -1,0 +1,118 @@
+/* gittalk comment style */
+#gitalk-container {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+/* toc style */
+@media (min-width: 1500px) {
+  .js-toc {
+    display: block !important;
+  }
+}
+
+.js-toc {
+  display: none;
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+}
+
+.js-toc::-webkit-scrollbar {
+  /* Chrome, Safari and Opera */
+  display: none;
+}
+
+.js-toc {
+  position: fixed;
+  width: 20%;
+  max-width: 400px;
+  right: 3rem;
+  top: 10em;
+  text-align: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 1rem 0rem;
+}
+
+ol.toc-list > li > a:hover {
+  text-underline-position: under;
+  font-weight: bolder;
+}
+
+.toc-list li {
+  list-style: none;
+}
+
+.toc-list a {
+  text-decoration: none;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.is-active-link::before {
+  background-color: #d71a1b !important;
+}
+
+.logo__cursor {
+  background: #d71a1b;
+}
+
+/* 超链接样式  */
+
+.post-tags a,
+.post-content a {
+  text-decoration: none;
+  border-bottom: 1px dashed #d71a1b;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.post-tags a:hover,
+.post-content a:hover,
+nav a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #d71a1b;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+/* custom ::selection */
+::selection {
+  background: #b5b5b5;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #b5b5b5;
+  color: #fff;
+}
+
+::-webkit-selection {
+  background: #b5b5b5;
+  color: #fff;
+}
+
+/* abandoned link style  */
+
+/* .post-content a {
+    transition: background-size 0.1s ease;
+    background: linear-gradient(to bottom, transparent 62%, #fff56644 0) center center/0% 75% no-repeat;
+    color: #52c41a;
+    cursor: pointer;
+}
+
+.post-content a:hover {
+    background-size: 100% 100%;
+    color: #389e0d;
+}
+
+.post-content a:active {
+    background-size: 80% 100%;
+} */

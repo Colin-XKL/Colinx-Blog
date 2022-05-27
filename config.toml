@@ -2,6 +2,7 @@ baseurl = "/"
 languageCode = "en-us"
 defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
+hasCJKLanguage = true
 theme = "hello-friend"
 paginate = 10
 enableRobotsTXT = true
@@ -21,6 +22,9 @@ showReadingTime = false
 # leave empty to disable, enter display text to enable
 lastModDisplay = "最后修改"
 rssFullText = true
+# custom params
+# The values nested under params: will populate the .Site.Params variable for use in templates
+canonicalRelLinkBase = 'https://blog.colinx.one/'
 
 [languages]
 	[languages.en]
@@ -37,12 +41,10 @@ rssFullText = true
 	minuteReadingTime = "min read"
 	dateFormatSingle = "2006-01-02"
 	dateFormatList = "2006-01-02"
-
 		[languages.en.params.logo]
 		logoText = "Colinx Blog"
 		logoHomeLink = "/"
 		# or
-		#
 		# path = "/img/your-example-logo.svg"
 		# alt = "Your example logo alt text"
 
@@ -67,7 +69,7 @@ rssFullText = true
 [languages.zh-cn]
 title = "Colinx Blog"
 subtitle = "Colin的个人博客"
-keywords = "Colin,个人博客"
+keywords = "Colin,个人博客,技术,后端,Linux,前端"
 copyright = ""
 menuMore = "显示更多"
 writtenBy = "作者"

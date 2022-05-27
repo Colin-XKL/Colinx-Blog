@@ -4,7 +4,7 @@ date: 2021-02-07
 lastmod: 2021-02-07
 description: Minecraft上云笔记 - MC服务器快速搭建&MOD推荐&性能优化。MC快速上云，学生机轻松带动，三五好友，畅快联机
 categories:
-- 教程
+- 技术
 - 指南
 tags:
 - Java
@@ -89,7 +89,7 @@ services:
       ONLINE_MODE: "FALSE" #正版校验开关
       ALLOW_FLIGHT: "FALSE" 
       USE_AIKAR_FLAGS: "false" # 一些优化
-      RESOURCE_PACK: "https://blog-1301127393.cos.ap-shanghai.myqcloud.com/MC/Distribution/VNR-1.0.1.zip" # 我自己会用的资源包，这里填url
+      RESOURCE_PACK: "https://blog-1301127393.file.myqcloud.com/MC/Distribution/VNR-1.0.1.zip" # 我自己会用的资源包，这里填url
       NETWORK_COMPRESSION_THRESHOLD: 512 # 网络优化
     restart: unless-stopped
   rcon:
@@ -146,7 +146,7 @@ volumes:
 
 上一张HMCL的主页的图：
 
-![image-20210129172401421](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs20210207205913.png)
+![image-20210129172401421](https://blog-1301127393.file.myqcloud.com/BlogImgs20210207205913.png)
 
 其他没有使用过的启动器暂时不予评价。
 
@@ -344,7 +344,7 @@ MC服务器的优化主要聚焦在两个地方
 * 联机游戏间或卡顿，但很快恢复
 * 查看日志发现空载时时竟然仍会`can't keep up`
 
-![服务器在空载](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs20210207205922.png)
+![服务器在空载](https://blog-1301127393.file.myqcloud.com/BlogImgs20210207205922.png)
 
 
 
@@ -364,8 +364,7 @@ JVM优化的大头是GC。网上吹的漫天飞的G1GC的确有他的可取之�
 
 * **G1GC天生是为了现代互联网应用环境而设计的**，需要开很多个线程协同来完成垃圾回收工作。他适用于多核处理器+大内存机器上的高负荷运算。而我的服务器是单核，内存也并不富裕。
 * **多线程的GC模式跑在单核机器上**时出现的问题就是：单核机器无法并行处理多个任务，其本质上只是在多个任务之间快速切换，来实现各个任务基本“实时”“并行”运行。但是线程之间的切换是有代价的，**性能损耗积少成多**。
-* **G1GC追求在延迟可控的情况下达到更高的吞吐量**。但他的**代价是[更多的内存占用](jvm G1 垃圾收集器有什么缺点？ - SegmentFault 思否
-  https://segmentfault.com/q/1010000021658061)。**小内存机器并不适合使用G1GC。
+* **G1GC追求在延迟可控的情况下达到更高的吞吐量**。但他的**代价是[更多的内存占用](https://segmentfault.com/q/1010000021658061)。**小内存机器并不适合使用G1GC。
 
 物色了一番，我最终选择换用Serial GC代替原本的G1GC。
 
@@ -382,19 +381,19 @@ JVM优化的大头是GC。网上吹的漫天飞的G1GC的确有他的可取之�
 
 1. 优化前MC服务器的资源占用情况
 
-![360截图20210129163301881](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs20210207205932.jpg)
+![360截图20210129163301881](https://blog-1301127393.file.myqcloud.com/BlogImgs20210207205932.jpg)
 
 
 
 2. SERIAL GC (1 ONLINE)
 
-![image-20210202194034351](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs20210207205936.png)
+![image-20210202194034351](https://blog-1301127393.file.myqcloud.com/BlogImgs20210207205936.png)
 
 
 
 3. 进一步对mod优化后，2 online
 
-![image-20210202221554906](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs20210207205939.png)
+![image-20210202221554906](https://blog-1301127393.file.myqcloud.com/BlogImgs20210207205939.png)
 
 
 
@@ -412,11 +411,11 @@ JVM优化的大头是GC。网上吹的漫天飞的G1GC的确有他的可取之�
 
 我家：
 
-![屏幕截图(13)](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs20210207205942.png)
+![屏幕截图(13)](https://blog-1301127393.file.myqcloud.com/BlogImgs20210207205942.png)
 
 
 
-![屏幕截图(16)](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs20210207205946.png)
+![屏幕截图(16)](https://blog-1301127393.file.myqcloud.com/BlogImgs20210207205946.png)
 
 
 
@@ -424,13 +423,13 @@ JVM优化的大头是GC。网上吹的漫天飞的G1GC的确有他的可取之�
 
 我安装的光影 Sildurs Vibrant Shaders v1.281 High 效果图
 
-![屏幕截图(12)](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs20210207205949.png)
+![屏幕截图(12)](https://blog-1301127393.file.myqcloud.com/BlogImgs20210207205949.png)
 
 
 
 Better HUD + 旅行地图效果图
 
-![屏幕截图(17)](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs20210207205953.png)
+![屏幕截图(17)](https://blog-1301127393.file.myqcloud.com/BlogImgs20210207205953.png)
 
 
 

@@ -1,0 +1,18 @@
+<script>
+    function panguSpaing() {
+        pangu.spacingElementByClassName('post');
+        pangu.spacingElementByTagName('p');
+        // listen to any DOM change and automatically perform spacing via MutationObserver()
+        document.addEventListener('DOMContentLoaded', () => {
+            pangu.autoSpacingPage();
+        });
+    }
+</script>
+
+<script async 
+onerror="fallbackJSloader('https://cdn.staticaly.com/gh/panr/hugo-theme-hello-friend/master/static/assets/main.js')"
+src="{{ "assets/main.js" | absURL }}"></script>
+
+<script async onload="panguSpaing()"
+    onerror="fallbackJSloader('https://cdn.staticfile.org/pangu/4.0.7/pangu.min.js','panguSpaing')"
+    src="https://cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>

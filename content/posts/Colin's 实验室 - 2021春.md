@@ -4,7 +4,7 @@ date: 2021-02-25
 lastmod: 2021-03-30
 description: 小玩具及他们的demo
 categories:
-- 杂记
+- 技术
 tags:
 - 技术
 - Python
@@ -22,7 +22,7 @@ tags:
 
 > 自动分割给定的英文文本，提取词元后在数据库中搜索，根据给定的词汇量和难度等级进行筛选，只能提取阅读障碍词汇并高亮当前备考项目（如四级）的重点单词
 
- ![360截图20210206210445677](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20210330233722.jpg)
+ ![360截图20210206210445677](https://blog-1301127393.file.myqcloud.com/BlogImgs/20210330233722.jpg)
 
 ## 知乎爬虫及JS逆向
 
@@ -40,7 +40,7 @@ tags:
 
 > 1核2G学生机，从2人联机频频崩溃到8人挖矿毫无压力，学习了JVM GC种种，对服务端程序的一些参数也渐渐熟悉。优化效果喜人，总有还能压榨的性能，就像资本家看手下的骡子一样hhh
 
-![屏幕截图(12)](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs20210207205949.png)
+![屏幕截图(12)](https://blog-1301127393.file.myqcloud.com/BlogImgs20210207205949.png)
 
 
 
@@ -48,7 +48,7 @@ tags:
 
 > 一款跨平台的灵感素材收集与简易管理App，基于Flutter构建，跨平台，颜值在线。
 
-![截屏2021-03-30 23.21.32](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20210330233350.png)
+![截屏2021-03-30 23.21.32](https://blog-1301127393.file.myqcloud.com/BlogImgs/20210330233350.png)
 
 > 持续开发中，附roadmap
 >
