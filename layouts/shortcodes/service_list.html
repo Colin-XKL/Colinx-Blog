@@ -1,0 +1,30 @@
+<!--
+Params:
+    name:       css #id 
+    url:        path or url of your data.json
+-->
+{{ with .Get "url" }}
+    {{ $url := . }}
+    {{ with $.Get "name" }}
+        {{ $name := . }}
+        {{ $data := getJSON $url }}
+        {{ range $data.data }}
+            {{ $item := . }}
+            
+            <h3 id="{{$item.name}}">{{$item.name}}</h3>
+            {{ $link := urls.Parse $item.link }}
+            <p>{{$item.type}} - {{$item.subtitle}}</p>
+            <p>地址：
+                {{ if (gt (len $link.Host) 1) }}
+                    <a href="{{$item.link}}" >{{$link.Host}}</a> 
+                {{ else }}
+                    {{$item.link}}
+                {{ end }}
+               </p>
+            {{ if (gt (len $item.StartServingAt) 1) }}
+                <p>上线于{{$item.StartServingAt}}</p>
+            {{ end }}
+
+        {{ end }}
+    {{ end }}
+{{ end }}
