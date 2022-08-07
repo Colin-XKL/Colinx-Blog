@@ -112,7 +112,7 @@ dateFormatList = "2006-01-02"
 	url = "/aboutme"
 	weight = 5
 	[[languages.zh-cn.menu.main]]
-	identifier = "rss"
-	name = "RSS"
-	url = "/index.xml"
+	identifier = "subscribe"
+	name = "订阅"
+	url = "/subscribe"
 	weight = 10
