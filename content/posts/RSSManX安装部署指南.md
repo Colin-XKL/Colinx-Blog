@@ -223,15 +223,15 @@ python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 
 2. 如开启海外站点解锁支持，第一次冷启动需要等待 3-5 分钟才能完全启动所有组件。
 
-3. 数据保存位置`/data/docker/`
+3. 数据默认保存位置`~/.docker/Database`（注意以执行docker命令的用户为准，如使用root账户执行，则文件位于root用户home目录）
 
-4. 在 TTRSS 中将原来订阅的 `https://rsshub.app/*` 更改为 `http://rsshub/*` 即可使用 RSS Man X内的自建 RSSHub 实例，并激活反反爬虫和海外源加速等功能
+4. 默认情况下只有 TTRSS 和 Huginn 可以从外部访问，其他组件互相可以访问但不能直接从外部访问以提高安全性。组件间互相访问可以使用`容器名+指定端口`，端口默认为 80，如`http://rsshub/xxxxx`即可访问到 RSS Man X 内的监听 80 端口的 rsshub 实例。
 
-5. 如无法访问rsshub的官方文档站点，可以使用我维护的反代站点[https://rsshub-doc.azure.colinx.one/](https://rsshub-doc.azure.colinx.one/)
+5. 在 TTRSS 中将原来订阅的 `https://rsshub.app/*` 更改为 `http://rsshub/*` 即可使用 RSS Man X内的自建 RSSHub 实例，并激活反反爬虫和海外源加速等功能
 
-6. 关于 ARM 平台的支持可查阅[置顶的 issue](https://github.com/Colin-XKL/RSSmanX/issues/5)
+6. 如无法访问rsshub的官方文档站点，可以使用我维护的反代站点[https://rsshub-doc.azure.colinx.one/](https://rsshub-doc.azure.colinx.one/)
 
-7. 默认情况下只有TTRSS和Huginn可以从外部访问，其他组件互相可以访问但不能直接从内部访问以提高安全性
+7. 关于 ARM 平台的支持可查阅[置顶的 issue](https://github.com/Colin-XKL/RSSmanX/issues/5)，替换部分不支持arm架构的docker镜像为支持arm的镜像即可。
 
 8. RSS Man X的除 lite 以外的版本默认包含了自托管的 mercury 实例，你只需要在插件配置页面设置 mercury 实例地址为 `service.mercury:3000` 即可，同理，OpenCC实例地址为`service.opencc:3000`
 
@@ -242,8 +242,6 @@ python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 11. `ls`没有显示`.env`文件是因为以点开头的文件在Linux中都是默认隐藏的，可以使用`ls -a`查看到
 
 12. vi/vim编辑文本太麻烦可以尝试使用nano
-
-    
 
 
 

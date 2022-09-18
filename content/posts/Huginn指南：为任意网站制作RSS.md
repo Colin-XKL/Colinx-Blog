@@ -172,7 +172,9 @@ href属性里面的内容是他的链接，title属性里面的内容则是他�
 
 其中`post_url`为你的browserless实例地址，如果你使用了RSS MAN X里的Huginn可以直接向上面一样填写。`payload`中的`url`字段填写你需要的网页地址。注意emit_events要设置为`true`，这样才方便我们后续使用WebSite Agent操作。
 
-点击Dry Run，如果能返回一个带有`body`字段且里面有文本内容说明调用成功
+点击Dry Run，如果能返回一个带有`body`字段且里面有文本内容说明调用成功。
+
+调用不成功检查一下配置，以及是不是我们的爬虫被目标网站拦截了。若是爬虫被拦截可参考文末的解决方案。
 
 ![image-20220508195731732](https://blog-1301127393.file.myqcloud.com/BlogImgs/202205082207725.png)
 
@@ -283,13 +285,13 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like 
 
 * **为什么启动docker容器后访问Huginn显示网络错误？**
 
-​	Huignn冷启动较慢，需要等待三五分钟。如果还是不行，检查端口映射和防火墙设置
+  Huignn冷启动较慢，需要等待三五分钟。如果还是不行，检查端口映射和防火墙设置
 
 * **为什么抓取到的包含相对路径的结果，网页上可以点击访问，但是生成的RSS不能正常使用？**
 
   检查link的设置，有些网站只是域名，有些网站有子目录，具体查看该网页源码中head节点里base url的设置
 
-* 如何对爬取到的某一项的字符串做更高级更复杂的处理？
+* **如何对爬取到的某一项的字符串做更高级更复杂的处理？**
 
   可以参考[Hugnn官方对Liquid语法的文档](https://github.com/huginn/huginn/wiki/Formatting-Events-using-Liquid)以及[Shopify官方关于Liquid模板的语法文档](https://shopify.dev/api/liquid)
 
@@ -297,6 +299,11 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like 
 
   若部署后某个应用一直无法通过浏览器访问，请检查是否绑定到了6000/6666等特殊端口，浏览器会拦截对这些端口的访问参见[这里](https://blog.colinx.one/posts/docker-compose%E7%9A%84%E9%94%99%E8%AF%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/)
 
+* **Huginn 爬虫访问目标网站被拦截了怎么解决**  
+  介绍几个基本的反反爬虫策略：
+  1. 带上User Agent，要求是真实的浏览器UA。
+  2. Browserless去掉默认会和请求一起发送的可以被识别为爬虫的特征参数，设置browserless的环境变量`DEFAULT_HEADLESS=false`
+  3. 使用随机代理IP，适用于因爬取频率达到爬虫阈值
 
 
 ## 扩展阅读
