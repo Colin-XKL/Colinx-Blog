@@ -5,7 +5,7 @@
 ![Blog-Vercel](https://img.shields.io/website?label=vercel&style=flat-square&url=https%3A%2F%2Fcolinx-blog.vercel.app)
 ![Blog-CloudflarePages](https://img.shields.io/website?label=cloudflare%20pages&style=flat-square&url=https%3A%2F%2Fcolinx-blog.pages.dev)
 ![Blog-AzureStaticPages](https://img.shields.io/website?label=azure%20static%20pages&style=flat-square&url=https%3A%2F%2Fnice-glacier-095b09e00.1.azurestaticapps.net)
-
+![Blog-GithubPages](https://img.shields.io/website?label=gh-pages&style=flat-square&url=https%3A%2F%2Fgh-pages.colinx.one)
 
 Colin's Personal Blog http://blog.colinx.one
 
@@ -13,15 +13,15 @@ Colin's Personal Blog http://blog.colinx.one
 This site has been deployed to multiple static web hosting providers, for load balacing and performance testing.
 
 * Netlify  
-
 [colins-blog.netlify.app](https://colins-blog.netlify.app)  
 
 * Vercel  
-
 [colinx-blog.vercel.app](https://colinx-blog.vercel.app)  
 * CloudFlare Pages   
-
 [colinx-blog.pages.dev](https://colinx-blog.pages.dev)   
 * Azure Static Web  
-
 [nice-glacier-095b09e00.1.azurestaticapps.net](https://nice-glacier-095b09e00.1.azurestaticapps.net)  
+
+
+* Github Pages  
+[gh-pages.colinx.one](https://gh-pages.colinx.one/)
