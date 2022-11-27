@@ -61,7 +61,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://colin-xkl.github.io/
     runs-on: ubuntu-22.04
     needs: build
     steps:
