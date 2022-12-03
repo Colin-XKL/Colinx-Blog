@@ -9,6 +9,12 @@
     }
 </script>
 
+<script>
+    function initQuickLink(){
+        quicklink.listen();
+    }
+</script>
+
 <script async 
 onerror="fallbackJSloader('https://cdn.staticaly.com/gh/panr/hugo-theme-hello-friend/master/static/assets/main.js')"
 src="{{ "assets/main.js" | absURL }}"></script>
@@ -16,3 +22,6 @@ src="{{ "assets/main.js" | absURL }}"></script>
 <script async onload="panguSpaing()"
     onerror="fallbackJSloader('https://cdn.staticfile.org/pangu/4.0.7/pangu.min.js','panguSpaing')"
     src="https://cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+<script async onload="initQuickLink()"
+    onerror="fallbackJSloader('https://cdn.staticfile.org/quicklink/2.3.0/quicklink.min.js','initQuickLink')"
+    src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.js"></script>
