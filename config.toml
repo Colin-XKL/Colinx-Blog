@@ -7,6 +7,8 @@ theme = "hello-friend"
 paginate = 10
 enableRobotsTXT = true
 
+# init theme sub module by this command
+# git submodule update --init --recursive  
 [markup.goldmark.renderer]
 unsafe = true #避免MarkDown内嵌的HTML被优化掉，尤其是Typora缩放过的图片
 
