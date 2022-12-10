@@ -1,0 +1,11 @@
+{
+  "responseOverrides": {
+    "400": {
+      "statusCode": 301,
+      "redirect": "/404"
+    },
+    "404": {
+      "rewrite": "/404"
+    }
+  }
+}
