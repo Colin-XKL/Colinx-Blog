@@ -26,7 +26,7 @@ lastModDisplay = "最后修改"
 rssFullText = true
 # custom params
 # The values nested under params: will populate the .Site.Params variable for use in templates
-canonicalRelLinkBase = 'https://blog.colinx.one/'
+canonicalRelLinkBase = 'https://blog.colinx.one'
 
 [languages]
 	[languages.en]
