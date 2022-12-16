@@ -12,7 +12,7 @@
   content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"
 />
 
-<link rel="canonical" href="{{ path.Join $.Site.Params.canonicalRelLinkBase .RelPermalink }}" />
+<link rel="canonical" href="{{ $.Site.Params.canonicalRelLinkBase }}{{ .RelPermalink }}" />
 
 <!-- head custom -->
 {{- partial "prepended_head.html" . }}
