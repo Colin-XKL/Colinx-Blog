@@ -243,6 +243,8 @@ python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 
 12. vi/vim编辑文本太麻烦可以尝试使用nano
 
+13. RSS Man 里所有容器绑定了服务器的/etc/localtime，使用`sudo timedatectl set-timezone Asia/Shanghai` 设定系统的时区为上海后，容器里的时区也可以同步，这样日志里的时间就是东八区了
+
 
 
 **获取帮助**
