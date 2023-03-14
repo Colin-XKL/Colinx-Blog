@@ -21,3 +21,12 @@ lastmod: 2021-05-10
 - 博客主页：https://blog.colinx.one
 - Github 主页: https://github.com/Colin-XKL
 - Email: Colin_XKL#outlook.com
+
+
+---
+
+获取支持/服务  
+
+支持公益事业发展, 如任何非盈利机构有 IT 服务部署 / 网站托管或维护 / 架构咨询 / 问题排障 等需求可直接联系, 在能力范围内提供无偿支持  
+
+其他个人或企业有相关需求的可通过email免费咨询或以其他形式提供付费支持
