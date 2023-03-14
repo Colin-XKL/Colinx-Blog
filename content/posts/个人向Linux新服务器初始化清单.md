@@ -38,7 +38,6 @@ tags:
 // 添加到wheel用户组自动获得sudo权限
 
 useradd -m --groups wheel colin
-
 ```
 
 也可直接编辑`/etc/sudoers` 文件为新用户添加 sudo 权限，使用 `visudo` 指令可以自动帮你校验，避免配置写错把系统搞崩
@@ -52,7 +51,6 @@ useradd -m --groups wheel colin
 一般情况下，将  `/etc/apt/sources.list`  文件中 Debian 默认的源地址  `http://deb.debian.org/`  替换为  `http://mirrors.ustc.edu.cn`  即可。
 
 ```shell
-
 //for debian
 sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 
