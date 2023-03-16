@@ -199,16 +199,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 ```shell
 # custom theme
-ZSH_THEME="af-magic"  // 简洁的主题, 一行
+ZSH_THEME="af-magic"  // 简洁的主题, 一行, 推荐
 ZSH_THEME="gnzh"  // 更丰富的主题, 提示信息一行, 输入命令在另一行
 
 # custom conf override
 CASE_SENSITIVE="false"
 HYPHEN_INSENSITIVE="false"
 plugins=(git z zsh-autosuggestions zsh-syntax-highlighting sudo)
-
-
-
 ```
 
 日常管理服务器比较多,以及经常复制命令的建议用 gnzh 这个主题.
@@ -225,6 +222,33 @@ export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 ```shell
 source ~/.zshrc
+```
+
+
+
+
+
+```shell
+// 自定义需求较高的推荐 space ship 这个主题
+
+// 本地安装 nerd font 以正确显示部分图标
+
+brew tap homebrew/cask-fonts 
+brew install --cask font-<FONT NAME>-nerd-font
+
+// 推荐字体 fira code pro with nerd fonts. 安装完后更改本机终端字体
+brew install --cask font-fira-mono-nerd-font
+
+// 安装zsh 主题 space-ship
+
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+// 之后设置主题
+ZSH_THEME="spaceship"
+
+// 还有一些自用的推荐配置件文末附录
+
 ```
 
 ### 2.3 nano 代码文件规则
@@ -299,3 +323,99 @@ END
 * RSSManX 安装部署指南 <https://blog.colinx.one/posts/rssmanx%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/>
 * 云服务器入门指南 <https://blog.colinx.one/posts/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/>
 * Portainer Install Doc <https://docs.portainer.io/start/install-ce/server/docker/linux>
+
+
+
+```shell
+# 个人自用配置, 搭配 space ship 主题使用, 建议安装 nerd font 以正确显示图标
+# ~/.spaceshiprc.zsh
+
+SPACESHIP_USER_SHOW="always"
+SPACESHIP_USER_PREFIX=""
+SPACESHIP_USER_COLOR="007"
+SPACESHIP_USER_COLOR_ROOT="red"
+SPACESHIP_USER_SUFFIX=""
+
+
+SPACESHIP_HOST_SHOW="always"
+#SPACESHIP_HOST_PREFIX="\e[3#1m@"
+SPACESHIP_HOST_PREFIX="@"
+SPACESHIP_HOST_COLOR="black"
+SPACESHIP_HOST_COLOR_SSH="green"
+
+
+SPACESHIP_DIR_TRUNC="0"
+SPACESHIP_DIR_TRUNC_PREFIX=".../"    
+
+SPACESHIP_PROMPT_ORDER=(
+  dir            # Current directory section
+  git            # Git section (git_branch + git_status)
+  hg             # Mercurial section (hg_branch  + hg_status)
+  package        # Package version
+  node           # Node.js section
+  bun            # Bun section
+  deno           # Deno section
+  ruby           # Ruby section
+  python         # Python section
+  elm            # Elm section
+  elixir         # Elixir section
+  xcode          # Xcode section
+  swift          # Swift section
+  golang         # Go section
+  perl           # Perl section
+  php            # PHP section
+  rust           # Rust section
+  haskell        # Haskell Stack section
+  scala          # Scala section
+  kotlin         # Kotlin section
+  java           # Java section
+  lua            # Lua section
+  dart           # Dart section
+  julia          # Julia section
+  crystal        # Crystal section
+  docker         # Docker section
+  docker_compose # Docker section
+  aws            # Amazon Web Services section
+  gcloud         # Google Cloud Platform section
+  azure          # Azure section
+  venv           # virtualenv section
+  conda          # conda virtualenv section
+  dotnet         # .NET section
+  ocaml          # OCaml section
+  vlang          # V section
+  zig            # Zig section
+  purescript     # PureScript section
+  erlang         # Erlang section
+  kubectl        # Kubectl context section
+  ansible        # Ansible section
+  terraform      # Terraform workspace section
+  pulumi         # Pulumi stack section
+  ibmcloud       # IBM Cloud section
+  nix_shell      # Nix shell
+  gnu_screen     # GNU Screen section
+  exec_time      # Execution time
+  async          # Async jobs indicator
+  line_sep       # Line break
+  battery        # Battery level and status
+  jobs           # Background jobs indicator
+  exit_code      # Exit code section
+  sudo           # Sudo indicator
+  char           # Prompt character
+)
+
+SPACESHIP_RPROMPT_ORDER=(
+  time           # Time stamps section
+  user           # Username section
+  host           # Hostname section
+)
+
+
+cdl() {
+        cd "$@" && ls;
+}
+
+cdll() {
+        cd "$@" && ls -lh;
+}
+
+```
