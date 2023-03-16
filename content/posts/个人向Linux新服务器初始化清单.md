@@ -224,10 +224,6 @@ export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 source ~/.zshrc
 ```
 
-
-
-
-
 ```shell
 // 自定义需求较高的推荐 space ship 这个主题
 
@@ -248,7 +244,6 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 ZSH_THEME="spaceship"
 
 // 还有一些自用的推荐配置件文末附录
-
 ```
 
 ### 2.3 nano 代码文件规则
@@ -324,11 +319,11 @@ END
 * 云服务器入门指南 <https://blog.colinx.one/posts/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/>
 * Portainer Install Doc <https://docs.portainer.io/start/install-ce/server/docker/linux>
 
-
-
 ```shell
 # 个人自用配置, 搭配 space ship 主题使用, 建议安装 nerd font 以正确显示图标
 # ~/.spaceshiprc.zsh
+# space ship 主题文档
+# https://spaceship-prompt.sh/getting-started/
 
 SPACESHIP_USER_SHOW="always"
 SPACESHIP_USER_PREFIX=""
@@ -417,5 +412,4 @@ cdl() {
 cdll() {
         cd "$@" && ls -lh;
 }
-
 ```
