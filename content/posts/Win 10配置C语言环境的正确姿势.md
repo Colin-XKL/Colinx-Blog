@@ -1,8 +1,8 @@
 ---
-title:  Win 10配置C语言环境的正确姿势
+title:  Win 10 配置 C 语言环境的正确姿势
 date: 2020-12-27
 lastmod: 2020-12-27
-description: VC6.0太古老，Dev C++没补全不友好，MinGW安装太烦恼？你用着最新的电脑，最新的系统，却在用着上个世纪的软件开始你人生第一门编程课？你需要这篇指南：在现代化的硬件和平台上使用现代化工具学习C语言
+description: VC6.0 太古老，Dev C++没补全不友好，MinGW 安装太烦恼？你用着最新的电脑，最新的系统，却在用着上个世纪的软件开始你人生第一门编程课？你需要这篇指南：在现代化的硬件和平台上使用现代化工具学习 C 语言
 categories:
 - 技术
 - 指南
@@ -12,52 +12,52 @@ tags:
 - 环境配置
 ---
 
-<!-- # Win 10配置C语言环境的正确姿势 -->
+<!-- # Win 10 配置 C 语言环境的正确姿势 -->
 
 > 本系列教程旨在为刚入门的编程语言学习者做好指南工作，开始编码，本应很简单
 >
 > The PAINLESS way to start coding!
 
-VC6.0太古老，Dev C++没补全不友好，MinGW安装太烦恼？
+VC6.0 太古老，Dev C++没补全不友好，MinGW 安装太烦恼？
 
 你用着最新的电脑，最新的系统，却在用着上个世纪的软件开始你人生第一门编程课？
 
-你需要这篇指南：**在现代化的硬件和平台上使用现代化工具学习C语言**
+你需要这篇指南：**在现代化的硬件和平台上使用现代化工具学习 C 语言**
 
-*aka*：**Win10配置C语言环境的正确姿势**
+*aka*：**Win10 配置 C 语言环境的正确姿势**
 
->截止2020年末，Win10配置C语言环境的常见方案有：
+>截止 2020 年末，Win10 配置 C 语言环境的常见方案有：
 >
->* 使用scoop来便捷地安装所需的环境
->* 使用Winget来安装所需的环境 *[不成熟]*
->* 使用国内镜像Cygwin+VSCode配置C语言环境 【快速】
->* 使用WSL+VSCode
->* 使用WSL+Clion
+>* 使用 scoop 来便捷地安装所需的环境
+>* 使用 Winget 来安装所需的环境 *[不成熟]*
+>* 使用国内镜像 Cygwin+VSCode 配置 C 语言环境【快速】
+>* 使用 WSL+VSCode
+>* 使用 WSL+Clion
 
 综合考虑可行性与小白友好性，我们推荐的方案是：
 
 
 
-## 使用国内镜像Cygwin+VSCode快速配置C语言环境
+## 使用国内镜像 Cygwin+VSCode 快速配置 C 语言环境
 
-C语言编写的`.c`源代码文件需要通过编译器编译生成可执行文件`.exe`后才能运行。Windows系统默认没有自带C语言的编译器，这里我们需要手动下载配置才行。
+C 语言编写的`.c`源代码文件需要通过编译器编译生成可执行文件`.exe`后才能运行。Windows 系统默认没有自带 C 语言的编译器，这里我们需要手动下载配置才行。
 
-C语言编译器在Win平台下的选择多种多样，但要么配置麻烦，使用门槛高；要么就是下载源在国外，国内下载慢如龟，甚至直接下不成。这里给出基于国内镜像Cygwin+VSCode配置C语言环境的方案，**实测可用，步骤清晰易懂，国内网络也可在几分钟内配置好！**
+C 语言编译器在 Win 平台下的选择多种多样，但要么配置麻烦，使用门槛高；要么就是下载源在国外，国内下载慢如龟，甚至直接下不成。这里给出基于国内镜像 Cygwin+VSCode 配置 C 语言环境的方案，**实测可用，步骤清晰易懂，国内网络也可在几分钟内配置好！**
 
 
 
 ### 编译器的下载与配置
 
-Cygwin的下载安装分为两个部分：
+Cygwin 的下载安装分为两个部分：
 
-1. Cygwin安装程序的下载（～1MB）
+1. Cygwin 安装程序的下载（～1MB）
 2. 安装器来完整后续的编译器核心部分的安装（～100MB）
 
-#### Cygwin的下载安装
+#### Cygwin 的下载安装
 
-Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install.html)。不过站点为全英文且国内访问速度堪忧，这里给出快速下载链接
+Cygwin 的安装程序可以[从其官方站点下载](https://cygwin.com/install.html)。不过站点为全英文且国内访问速度堪忧，这里给出快速下载链接
 
-> Cygwin安装程序**快速下载**（不限速，免登陆）
+> Cygwin 安装程序**快速下载**（不限速，免登陆）
 >
 > https://wws.lanzous.com/iUpUKjojq5i
 
@@ -77,7 +77,7 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 
 
-如果让你选择安装路径的话，可以不用改，不过默认在C盘。自己改的话，一个尽量避免使用中文路径，还有一个就是要记住你自己自定义的路径，后面会用到。
+如果让你选择安装路径的话，可以不用改，不过默认在 C 盘。自己改的话，一个尽量避免使用中文路径，还有一个就是要记住你自己自定义的路径，后面会用到。
 
 网络好的话，点击下一步会出来一个可用的国内镜像列表，那样的话随便选一个都可以直接进行后面的步骤。
 
@@ -85,7 +85,7 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 <img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164833.png" alt="image-20201224235644342" style="zoom:50%;" />
 
-在User URL的输入框输入`https://mirrors.tuna.tsinghua.edu.cn/cygwin/`并点击Add添加。之后点击下一步继续。
+在 User URL 的输入框输入`https://mirrors.tuna.tsinghua.edu.cn/cygwin/`并点击 Add 添加。之后点击下一步继续。
 
 
 
@@ -95,7 +95,7 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 
 
-之后会进入一个选择界面。这里选择要安装的组件。我们只需要C语言的编译器，这里在搜索框内输入`gcc`，然后在下方找到`gcc-core`  和   `gcc-g++`，点击右侧的三角形打开下拉菜单，选择9开头的版本。如下图所示。
+之后会进入一个选择界面。这里选择要安装的组件。我们只需要 C 语言的编译器，这里在搜索框内输入`gcc`，然后在下方找到`gcc-core`  和   `gcc-g++`，点击右侧的三角形打开下拉菜单，选择 9 开头的版本。如下图所示。
 
 <img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164839.png" alt="image-20201225000518139" style="zoom:50%;" />
 
@@ -109,7 +109,7 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 一般一到两分钟之内就可以下载完毕。如果过了很久还没有装完，要么是网络太垃圾，要么就是不小心勾了其他的软件，一直在安装。。。
 
-#### 配置Cygwin
+#### 配置 Cygwin
 
 下面要更改环境变量。如果你之前没有自定义安装目录的话，默认路径`C:\cygwin64\bin`。否则下文对应的地方使用你自定义的目录。
 
@@ -137,7 +137,7 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 <img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164916.png" alt="image-20201225000949291" style="zoom:50%;" />
 
-输入Cygwin安装路径下的bin目录。如果你之前没有自定义安装路径，直接设置如图即可。否则设置为你自定义的路径。
+输入 Cygwin 安装路径下的 bin 目录。如果你之前没有自定义安装路径，直接设置如图即可。否则设置为你自定义的路径。
 
 **注意：这一步只要添加这一个就好**，不要看我截图里面的很干净，就把其他的都删了
 
@@ -145,41 +145,41 @@ Cygwin的安装程序可以[从其官方站点下载](https://cygwin.com/install
 
 一路点击确定。修改完之后重启下电脑确保改动生效。
 
-在PowerShell中或者命令提示符中输入gcc并回车。如果显示no input files则表示安装成功。
+在 PowerShell 中或者命令提示符中输入 gcc 并回车。如果显示 no input files 则表示安装成功。
 
 <img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164921.png" alt="image-20201225001234917" style="zoom:50%;" />
 
 ### 配置编辑器
 
-安装完了编译器，可以先来Hello world了
+安装完了编译器，可以先来 Hello world 了
 
 ![image-20201225001723920](https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164924.png)
 
 
 
-按住Shift键，右键点击文件夹空白处，会出现在此处打开Powershell窗口的选项。
+按住 Shift 键，右键点击文件夹空白处，会出现在此处打开 Powershell 窗口的选项。
 
 <img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164932.png" alt="image-20201225001744160" style="zoom:50%;" />
 
 
 
-`gcc hello.c` 命令就会在当前目录下生成一个exe可执行文件。如果要指定文件名，可以`gcc hello.c -o hello.exe`
+`gcc hello.c` 命令就会在当前目录下生成一个 exe 可执行文件。如果要指定文件名，可以`gcc hello.c -o hello.exe`
 
-输入`./hello.exe`即可执行该exe文件。
+输入`./hello.exe`即可执行该 exe 文件。
 
 ![image-20201225002338213](https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227164937.png)
 
 
 
-如果直接双击exe也可以，不过运行窗口会一闪而过，解决方案是在main函数末尾，return语句前，加一句getchar()。
+如果直接双击 exe 也可以，不过运行窗口会一闪而过，解决方案是在 main 函数末尾，return 语句前，加一句 getchar()。
 
 
 
-配置VSCode的作为C语言学习环境
+配置 VSCode 的作为 C 语言学习环境
 
 <span id="vscode">VSCode</span>是由微软主导开发的一款开源免费、轻巧简单、功能强大的代码编辑器。配合各式各样的插件可以方便地实现各种你想得到和你想不到的功能。
 
-前往[VSCode官网](https://code.visualstudio.com/)下载Windows 版VScode。并按照安装程序的指引进行安装。
+前往[VSCode 官网](https://code.visualstudio.com/)下载 Windows 版 VScode。并按照安装程序的指引进行安装。
 
 直接下载链接
 
@@ -191,7 +191,7 @@ https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
 >
 > https://az764295.vo.msecnd.net/stable/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/VSCodeUserSetup-x64-1.52.1.exe
 >
-> 将开头的az764295.vo.msecnd.net替换掉，如下。
+> 将开头的 az764295.vo.msecnd.net 替换掉，如下。
 >
 > https://vscode.cdn.azure.cn/stable/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/VSCodeUserSetup-x64-1.52.1.exe
 >
@@ -239,7 +239,7 @@ https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
 
 
 
-完成了上述的设置，我们就可以来编写C语言的程序了。
+完成了上述的设置，我们就可以来编写 C 语言的程序了。
 
 ### Hello，C！
 
@@ -255,7 +255,7 @@ https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
 
 
 
-点击右上角的三角形按钮即可自动编译运行你的C语言代码。在窗口下方的终端即可看到输出的`Hello,C!`字样。
+点击右上角的三角形按钮即可自动编译运行你的 C 语言代码。在窗口下方的终端即可看到输出的`Hello,C!`字样。
 
 
 <img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201227165112.png" alt="image-20201227164041803" style="zoom:50%;" />
@@ -264,4 +264,4 @@ https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
 
 ### 完成✅
 
-现在，开始你的C语言学习之旅吧！
+现在，开始你的 C 语言学习之旅吧！

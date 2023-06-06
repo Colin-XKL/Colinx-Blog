@@ -13,15 +13,15 @@ tags:
 ---
 
 
-一份 Linux 初始化清单, 避免每次拿到新的服务器都要一个个去各种地方搜集指令, 以做备忘 & 供有需要的朋友参考.
+一份 Linux 初始化清单，避免每次拿到新的服务器都要一个个去各种地方搜集指令，以做备忘 & 供有需要的朋友参考。
 
-服务器发行版我个人推荐 Debian 系列, CentOS 系现在已经开始分裂而且说实话对新手其实并不友好. Debian 是在兼容性, 易用性和稳定性之间都取得不错平衡的发行版. 新手推荐 Ubuntu, 不过最近商业化有点过度, 夹带了越来越多的私活, 我个人所有新安装的 Linux 已经全线转向 Debian. 下文以目前最新的 Debian 11 Bullseye 为例
+服务器发行版我个人推荐 Debian 系列，CentOS 系现在已经开始分裂而且说实话对新手其实并不友好。Debian 是在兼容性，易用性和稳定性之间都取得不错平衡的发行版。新手推荐 Ubuntu, 不过最近商业化有点过度，夹带了越来越多的私活，我个人所有新安装的 Linux 已经全线转向 Debian. 下文以目前最新的 Debian 11 Bullseye 为例
 
-> azure 干净的 debian 11 镜像, 资源使用情况供参考
+> azure 干净的 debian 11 镜像，资源使用情况供参考
 > 
 > ~1G Disk, ~100M RAM, ~300 packages
 
-本文仅列举主要事项和操作, 新手可先行阅读这篇文章熟悉概念. [云服务器入门指南](https://blog.colinx.one/posts/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/)
+本文仅列举主要事项和操作，新手可先行阅读这篇文章熟悉概念。[云服务器入门指南](https://blog.colinx.one/posts/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/)
 	
 正文开始
 
@@ -29,7 +29,7 @@ tags:
 
 ### 1.1 防火墙
 
-检查服务商防火墙和系统自带防火墙(debian 系一般为 `ufw`, cent os 系一般为 `firewall-cmd`).放行 SSH(22), 新的 SSH(自定义), HTTP, HTTPS, 以及其他常用开发端口
+检查服务商防火墙和系统自带防火墙 (debian 系一般为 `ufw`, cent os 系一般为 `firewall-cmd`).放行 SSH(22), 新的 SSH(自定义), HTTP, HTTPS, 以及其他常用开发端口
 
 ### 1.2 新建用户与检查 sudoer
 
@@ -41,7 +41,7 @@ useradd -m --groups wheel colin
 
 ```
 
-也可直接编辑`/etc/sudoers` 文件为新用户添加 sudo 权限, 使用 `visudo` 指令可以自动帮你校验, 避免配置写错把系统搞崩
+也可直接编辑`/etc/sudoers` 文件为新用户添加 sudo 权限，使用 `visudo` 指令可以自动帮你校验，避免配置写错把系统搞崩
 
 ### 1.3 镜像源与基础软件
 
@@ -61,7 +61,7 @@ sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list
 ```
 
-CentOS 系建议启用 EPEL, PowerTools 等 repo 以更方便地安装常用软件和工具. 此处不再赘述
+CentOS 系建议启用 EPEL, PowerTools 等 repo 以更方便地安装常用软件和工具。此处不再赘述
 
 推荐的几个国内镜像站: [清华大学 TUNA 镜像站](https://mirrors.tuna.tsinghua.edu.cn/), [中科大 USTC LUG 镜像站](https://mirrors.ustc.edu.cn/), [腾讯镜像站](https://mirrors.cloud.tencent.com/)
 
@@ -75,20 +75,20 @@ sudo apt install zsh tmux htop duf htop tldr screenfetch tree
 
 ### 1.4 SSH 安全
 
-修改端口, 配置文件`/etc/ssh/sshd_config`. 重启机器或 sshd 服务后生效
+修改端口，配置文件`/etc/ssh/sshd_config`. 重启机器或 sshd 服务后生效
 
 在本机检查`~/.ssh/`有无 id_rsa 等已生成的 key. 如没有再使用 `ssh-keygen` 生成私钥
-将本机的公钥上传到远端, 再写入远端的 `authorized_keys` 中
+将本机的公钥上传到远端，再写入远端的 `authorized_keys` 中
 
 `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys`
 
-注意修改权限, `~/.ssh/authorized_keys` 权限为 600. `~/.ssh/`为 400
+注意修改权限，`~/.ssh/authorized_keys` 权限为 600. `~/.ssh/`为 400
 
 如失败可参考这篇文章 debug. [https://superuser.com/questions/1137438/ssh-key-authentication-fails](https://superuser.com/questions/1137438/ssh-key-authentication-fails)
 
 ### 1.5 设置 hostname
 
-可选, 为了便于识别和后续配置 oh-my-zsh 更美观
+可选，为了便于识别和后续配置 oh-my-zsh 更美观
 
 ```shell
 sudo hostnamectl set-hostname my-new-server
@@ -101,7 +101,7 @@ sudo hostnamectl status
 
 ### 1.6 SWAP
 
-可选, 建议内存<2G 配置 swap, 大小至少为 2 倍物理内存
+可选，建议内存<2G 配置 swap, 大小至少为 2 倍物理内存
 
 推荐用 `fallocate` , 因为这个是最简单、最快速的创建交换空间的方法。 `fallocate`  命令用于为文件预分配块 / 大小。
 
@@ -141,7 +141,7 @@ sudo swapon -s
 
 ### 1.7 绑定域名  
 
-可选, 绑定一个域名或者改下本地 host 便于后续访问
+可选，绑定一个域名或者改下本地 host 便于后续访问
 
 ### 1.8 添加本地 SSH 别名
 
@@ -160,7 +160,7 @@ Host serverA
 
 #### Docker 安装
 
-可参考官网文档, 注意是 docker engine 的安装. [Docker 官方安装文档](https://docs.docker.com/engine/install/debian/)
+可参考官网文档，注意是 docker engine 的安装。[Docker 官方安装文档](https://docs.docker.com/engine/install/debian/)
 
 或者我之前写的 RSS MAN 部署文档中 docker 安装的部分
 [RSS MAN X 安装部署指南/#1-docker 环境准备](https://blog.colinx.one/posts/rssmanx%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/#1-docker%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
@@ -180,11 +180,11 @@ Host serverA
 }
 ```
 
-修改完保存重启 docker 服务即可生效. 可使用 `docker info` 命令检查是否生效
+修改完保存重启 docker 服务即可生效。可使用 `docker info` 命令检查是否生效
 
 ### 2.2 OH-MY-ZSH
 
-安装OH-MY-ZSH, 在此之前确保已安装 `git` 和 `zsh`
+安装 OH-MY-ZSH, 在此之前确保已安装 `git` 和 `zsh`
 
 ```shell
 sh -c "$(curl -fsSL [https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh](https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh))"
@@ -199,7 +199,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting --depth=1 
 ```
 
-按需修改配置. 文件位置`~/.zshrc`, 下面为个人常用配置供参考. 注意去源文件修改对应项, 没有再到末尾加
+按需修改配置。文件位置`~/.zshrc`, 下面为个人常用配置供参考。注意去源文件修改对应项，没有再到末尾加
 
 ```shell
 # custom conf override
@@ -210,7 +210,7 @@ plugins=(git z zsh-autosuggestions zsh-syntax-highlighting sudo)
 
 ```
 
-自定义配置, 添加到末尾
+自定义配置，添加到末尾
 
 ```shell
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
@@ -224,7 +224,7 @@ source ~/.zshrc
 
 ### 2.3 nano 代码文件规则
 
-日常常用文本编辑器为 nano, 轻量级编辑需求完全满足.
+日常常用文本编辑器为 nano, 轻量级编辑需求完全满足。
 
 ```shell
 curl https://cdn.jsdelivr.net/gh/scopatz/nanorc/install.sh | sh 
@@ -232,9 +232,9 @@ curl https://cdn.jsdelivr.net/gh/scopatz/nanorc/install.sh | sh
 
 ### 2.4 时区调整
 
-一般安装完都是 UTC+0, 看日志什么的不方便. 服务器初始化的时候配置好后面可以免去很多麻烦
+一般安装完都是 UTC+0, 看日志什么的不方便。服务器初始化的时候配置好后面可以免去很多麻烦
 
-debian 系可用过 `timedatectl` 命令调整时区. 东八区可以用这个命令
+debian 系可用过 `timedatectl` 命令调整时区。东八区可以用这个命令
 
 ```shell
 sudo timedatectl set-timezone Asia/Shanghai
@@ -242,13 +242,13 @@ sudo timedatectl set-timezone Asia/Shanghai
 
 ### 2.5 厂商监控/SDK 卸载
 
-懂得都懂, 自己搜
+懂得都懂，自己搜
 
 ## 3 - 进阶内容
 
 ### 3.1 内核参数调优
 
-一些内核参数调整, 交换内存阈值和 bbr, tcp fast open 等, 按需启用. 启用前务必确认自己了解对应字段的含义, 否则不如保留系统初始值.
+一些内核参数调整，交换内存阈值和 bbr, tcp fast open 等，按需启用。启用前务必确认自己了解对应字段的含义，否则不如保留系统初始值。
 
 配置文件位置 `/etc/sysctl.conf`
 
@@ -271,18 +271,18 @@ sudo sysctl -p
 
 ### 3.2 其他进阶配置
 
-一些其他的系统维护技巧与策略,如
+一些其他的系统维护技巧与策略，如
 
 **配置文件管理**
-所有应用 docker 化,通过 `docker compose` 文件管理
-配置共享存储, `rclone` 挂载 webdav, 同步 docker compose 等配置文件;
-traefik 网关作为统一出口, 负责服务发现和自动维护 HTTPS 证书, 自定义配置通过 headless CMS 如 directus 管理, traefik 设定为通过 http 方式获取远端配置即可.
+所有应用 docker 化，通过 `docker compose` 文件管理
+配置共享存储，`rclone` 挂载 webdav, 同步 docker compose 等配置文件;
+traefik 网关作为统一出口，负责服务发现和自动维护 HTTPS 证书，自定义配置通过 headless CMS 如 directus 管理，traefik 设定为通过 http 方式获取远端配置即可。
 
 **数据库备份**
 所有数据相关的统一挂载到`/data/database/xxx`, 配置定时任务进行备份
-以及配置 s3 等, 上传到其他存储介质和其他地域.
+以及配置 s3 等，上传到其他存储介质和其他地域。
 
-这些内容此处不再赘述, 有机会再单独写篇文章分享吧
+这些内容此处不再赘述，有机会再单独写篇文章分享吧
 
 END
 

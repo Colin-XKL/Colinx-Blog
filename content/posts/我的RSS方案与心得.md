@@ -1,9 +1,9 @@
 ---
-title: 我的RSS方案与心得
+title: 我的 RSS 方案与心得
 date: 2021-05-10
 lastmod: 2021-12-03
 cover: https://www.gethow.org/wp-content/uploads/2013/07/feed-297x140.jpg
-description: 使用RSS已经一年有余，这种对信息的主动掌握让我获取信息的质量和密度都上升了一个台阶。最早是使用TTRSS做服务端，安卓手机使用FeedMe订阅，主要订阅的是有源的商业内容站点、个人博客以及其他人分享的使用Feed43或Feedburner压制的源。随着我逐渐加大RSS阅读在我闲暇、琐碎时间内的比重，我对RSS有了更高的期望和要求，便开始了对如何构建更高效、更易用的RSS方案的探索。
+description: 使用 RSS 已经一年有余，这种对信息的主动掌握让我获取信息的质量和密度都上升了一个台阶。最早是使用 TTRSS 做服务端，安卓手机使用 FeedMe 订阅，主要订阅的是有源的商业内容站点、个人博客以及其他人分享的使用 Feed43 或 Feedburner 压制的源。随着我逐渐加大 RSS 阅读在我闲暇、琐碎时间内的比重，我对 RSS 有了更高的期望和要求，便开始了对如何构建更高效、更易用的 RSS 方案的探索。
 draft: false
 tags:
   - RSS
@@ -49,17 +49,17 @@ RSSHub 除了提供众多现成的各类站点的 RSS 规则之外，也提供�
 
 使用门槛比 RSSHub 略低，可视化界面还是比较友好的，不过新手上手还是会有点困难，了解了 Huginn 的工作原理和基本的 Liquid 语法之后就手到擒来了。
 
-### 3. 使用feed43和rss-proxy这类可视化工具自助生成RSS链接
+### 3. 使用 feed43 和 rss-proxy 这类可视化工具自助生成 RSS 链接
 
-手写解析规则还是太麻烦，很多网页结构很简单根本没必要单独花时间写一堆解析规则，而且有些时候只是想临时订阅一段时间或是订阅个很小的网站，不想大费周章，选择feed43这类工具不失为一个轻量又便捷的选择。不过[feed43](https://feed43.com/)对免费账户创建的RSS并不保证稳定，时常无法连接甚至直接失效。在Github上发现一个不错的替代品[rss-proxy](https://github.com/damoeb/rss-proxy/)，一个可视化的，快速自助生成站点RSS链接的工具。
+手写解析规则还是太麻烦，很多网页结构很简单根本没必要单独花时间写一堆解析规则，而且有些时候只是想临时订阅一段时间或是订阅个很小的网站，不想大费周章，选择 feed43 这类工具不失为一个轻量又便捷的选择。不过[feed43](https://feed43.com/)对免费账户创建的 RSS 并不保证稳定，时常无法连接甚至直接失效。在 Github 上发现一个不错的替代品[rss-proxy](https://github.com/damoeb/rss-proxy/)，一个可视化的，快速自助生成站点 RSS 链接的工具。
 
 ![rss-proxy screenshot](https://cdn.jsdelivr.net/gh/damoeb/rss-proxy/docs/rssproxy-candidates.png)
 
-填入目标网址就可以自动解析目标网页，程序会自动检测网页上的列表内容，可以自己选择要订阅哪个列表，然后就可以生成一个RSS链接。生成的RSS链接包括的信息有目标网址、要订阅的目标列表的节点信息和输出格式（RSS/ATOM）等，也就是说，rss-proxy并不像feed43会把解析的规则存储在服务端，它是直接编码在url里面的！rss-proxy开源支持自部署，不想用它提供的公用实例也可以自建，迁移零门槛。rss-proxy也支持调用无头浏览器渲染异步获取数据的网页，可玩性很高。
+填入目标网址就可以自动解析目标网页，程序会自动检测网页上的列表内容，可以自己选择要订阅哪个列表，然后就可以生成一个 RSS 链接。生成的 RSS 链接包括的信息有目标网址、要订阅的目标列表的节点信息和输出格式（RSS/ATOM）等，也就是说，rss-proxy 并不像 feed43 会把解析的规则存储在服务端，它是直接编码在 url 里面的！rss-proxy 开源支持自部署，不想用它提供的公用实例也可以自建，迁移零门槛。rss-proxy 也支持调用无头浏览器渲染异步获取数据的网页，可玩性很高。
 
-->>>> [rss-proxy公用实例](https://rssproxy-v1.migor.org/)，可以点击体验下，还是很方便的
+->>>> [rss-proxy 公用实例](https://rssproxy-v1.migor.org/)，可以点击体验下，还是很方便的
 
-使用了一段时间体验挺不错，有个小问题就是对UTF-8以外的编码不太友好。
+使用了一段时间体验挺不错，有个小问题就是对 UTF-8 以外的编码不太友好。
 
 ## 0x05 解锁海外 RSS 源
 
@@ -83,7 +83,7 @@ google 了一番，没人写过我这个问题。。。人家都是爬虫绕过�
 
 > [RSSman X](https://github.com/Colin-XKL/RSSmanX) 基于 docker-compsoe 提供容器化 TTRSS 与 RSSHUB 等组件的一键部署，整合实用组件为你带来最佳 RSS 体验
 >
-> **Feature： 简单一键部署，常用组件整合，自动更新支持，服务健康自检支持，海外站点 RSS 解锁**
+> **Feature：简单一键部署，常用组件整合，自动更新支持，服务健康自检支持，海外站点 RSS 解锁**
 
 ![image-20210512190732383](https://blog-1301127393.file.myqcloud.com/BlogImgs20210512190819.png)
 

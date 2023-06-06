@@ -1,8 +1,8 @@
 ---
-title: RSSManX - 一套RSS综合解决方案
+title: RSSManX - 一套 RSS 综合解决方案
 date: 2021-05-08
 lastmod: 2021-05-08
-description: 网站没有源，海外站的源看不了？这也许是第一个自带海外加速的RSS解决方案
+description: 网站没有源，海外站的源看不了？这也许是第一个自带海外加速的 RSS 解决方案
 categories:
   - 技术
   - 指南
@@ -23,7 +23,7 @@ tags:
 
 [RSSman X](https://github.com/Colin-XKL/RSSmanX) 基于 docker-compsoe 提供容器化 TTRSS 与 RSSHUB 等组件的一键部署，整合实用组件为你带来最佳 RSS 体验
 
-**Feature： 简单一键部署，常用组件支持，自动更新支持，服务健康自检支持，海外站点 RSS 解锁**
+**Feature：简单一键部署，常用组件支持，自动更新支持，服务健康自检支持，海外站点 RSS 解锁**
 
 ### 快速开始
 
