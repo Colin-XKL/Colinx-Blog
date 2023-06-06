@@ -15,13 +15,15 @@ jobs:
 
       - name: huacnlee.autocorrect
         uses: huacnlee/autocorrect-action@v2.5.4
+        with:
+          args: --fix
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: lint text"
-          title: "Text lint"
+          commit-message: "chore: lint text and auto correct"
+          title: "Text lint and fix"
           labels: "Lint"
           author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
           branch: "text-lint"
