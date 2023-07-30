@@ -23,8 +23,8 @@ RSS Man X 会利用到 docker 和 docker-compose，首先需要确保你的服�
 
 检查服务器中是否已经安装了 docker 和 docker-compose，并检查他们的版本是否太老。比如输入`docker --version`来检查 docker 的版本
 
-docker 的版本建议不要低于 19，docker-compose 的版本建议不要低于 1.20
-
+docker的版本建议不要低于19，docker-compose的版本建议不要低于1.20  
+(注: Docker 新版本可使用`docker compose` 替代 `docker-compose`)
 ```shell
 ~ » docker --version
 Docker version 20.10.12, build 20.10.12-0ubuntu2~20.04.1
@@ -177,14 +177,21 @@ python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 
 ```json
 {
-  "registry-mirrors": [
-    "https://mirror.ccs.tencentyun.com",
-    "https://docker.mirrors.ustc.edu.cn"
-  ]
+    "registry-mirrors": [
+        "https://hub-mirror.c.163.com",
+        "https://mirror.baidubce.com",
+        "https://docker.nju.edu.cn",
+        "https://docker.mirrors.sjtug.sjtu.edu.cn",
+        "https://dockerproxy.com",
+        "https://docker.m.daocloud.io"
+    ]
 }
 ```
 
-配置完成后`sudo systemctl restart docker`重启 docker 服务，然后输入`sudo docker info`，在输出结果的末尾可以看到`Registry Mirrors`里会出现我们刚刚配置的 Docker Hub 镜像
+update 20230720: 部分镜像源不再可用, 更新镜像源配置. 参考 https://gist.github.com/y0ngb1n/7e8f16af3242c7815e7ca2f0833d3ea6
+
+
+配置完成后`sudo systemctl restart docker`重启docker服务，然后输入`sudo docker info`，在输出结果的末尾可以看到`Registry Mirrors`里会出现我们刚刚配置的Docker Hub镜像
 
 群辉等 NAS 的系统并不是标准版 Linux，安装的也是魔改版 docker，上面的配置文件地址并不适用，建议自行搜索对应的文档或教程。
 
@@ -252,7 +259,7 @@ python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 * **For Tiny tiny RSS problems:**
   [https://tt-rss.org/wiki.php](https://tt-rss.org/wiki.php)
   [http://ttrss.henry.wang/](http://ttrss.henry.wang/)
-* **For RSShub problems:**
+* **For RSSHub problems:**
   [https://docs.rsshub.app/faq.html](https://docs.rsshub.app/faq.html)
 * **For Huginn problems:**
   [https://github.com/huginn/huginn#readme](https://github.com/huginn/huginn#readme)
