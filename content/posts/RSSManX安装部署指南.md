@@ -23,7 +23,7 @@ RSS Man X 会利用到 docker 和 docker-compose，首先需要确保你的服�
 检查服务器中是否已经安装了 docker 和 docker-compose，并检查他们的版本是否太老。比如输入`docker --version`来检查 docker 的版本
 
 docker 的版本建议不要低于 19，docker-compose 的版本建议不要低于 1.20  
-(注: Docker 新版本可使用`docker compose` 替代 `docker-compose`)
+(注：Docker 新版本可使用`docker compose` 替代 `docker-compose`)
 
 ```shell
 ~ » docker --version
