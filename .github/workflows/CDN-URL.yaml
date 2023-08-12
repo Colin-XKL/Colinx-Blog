@@ -28,6 +28,7 @@ jobs:
           commit-message: "Change img CDN URL"
           title: "Update imgs' CDN URL"
           labels: "URL"
+          base: "master"
           author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
           branch: "update-img-url"
           body: "Some imgs' URL need to be updated."
