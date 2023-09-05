@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: huacnlee.autocorrect
         uses: huacnlee/autocorrect-action@v2.8.4
