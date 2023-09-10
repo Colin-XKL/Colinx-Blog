@@ -32,7 +32,7 @@ Huginn 使用多个不同功能的 Agent 组合搭配来实现一系列功能，
 
 该元素可以用 CSS 选择器`.meiwen`选择到。
 
-**Tips:** class=xxx则使用`.xxx`,如果为id=xxx则使用`#xxx`
+**Tips:** class=xxx 则使用`.xxx`,如果为 id=xxx 则使用`#xxx`
 
 该标签是 a 标签，我们可以继续限定一下条件，使用`a.meiwen`
 
@@ -249,7 +249,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like 
 }  
 ```
 
-注意将原来的`url:??`的部分更改为`"url_from_event": "{{url}}"`,这样就指定使用Phantom JS Cloud为我们获取的完整网页，接下来的操作就大同小异了。配置好要爬取的字段和规则后点击Dry Run就可以看到结果
+注意将原来的`url:??`的部分更改为`"url_from_event": "{{url}}"`,这样就指定使用 Phantom JS Cloud 为我们获取的完整网页，接下来的操作就大同小异了。配置好要爬取的字段和规则后点击 Dry Run 就可以看到结果
 
 ![image-20220508215636780](https://blog-1301127393.file.myqcloud.com/BlogImgs/202205082207727.png)
 

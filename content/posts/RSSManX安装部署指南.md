@@ -185,7 +185,7 @@ python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 }
 ```
 
-update 20230720: 部分镜像源不再可用, 更新镜像源配置. 参考 https://gist.github.com/y0ngb1n/7e8f16af3242c7815e7ca2f0833d3ea6
+update 20230720: 部分镜像源不再可用，更新镜像源配置。参考 https://gist.github.com/y0ngb1n/7e8f16af3242c7815e7ca2f0833d3ea6
 
 配置完成后`sudo systemctl restart docker`重启 docker 服务，然后输入`sudo docker info`，在输出结果的末尾可以看到`Registry Mirrors`里会出现我们刚刚配置的 Docker Hub 镜像
 

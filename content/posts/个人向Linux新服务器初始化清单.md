@@ -1,7 +1,7 @@
 ---
 title: 个人向 Linux 新服务器初始化清单
 date: 2023-03-14
-description: 一份 Linux 初始化清单, 避免每次拿到新的服务器都要一个个去各种地方搜集指令, 以做备忘 & 供有需要的朋友参考. 以目前最新的 Debian 11 Bullseye 为例
+description: 一份 Linux 初始化清单，避免每次拿到新的服务器都要一个个去各种地方搜集指令，以做备忘 & 供有需要的朋友参考。以目前最新的 Debian 11 Bullseye 为例
 categories:
 - 技术
 tags:
@@ -61,7 +61,7 @@ sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.
 
 CentOS 系建议启用 EPEL, PowerTools 等 repo 以更方便地安装常用软件和工具。此处不再赘述
 
-推荐的几个国内镜像站: [清华大学 TUNA 镜像站](https://mirrors.tuna.tsinghua.edu.cn/), [中科大 USTC LUG 镜像站](https://mirrors.ustc.edu.cn/), [腾讯镜像站](https://mirrors.cloud.tencent.com/)
+推荐的几个国内镜像站：[清华大学 TUNA 镜像站](https://mirrors.tuna.tsinghua.edu.cn/), [中科大 USTC LUG 镜像站](https://mirrors.ustc.edu.cn/), [腾讯镜像站](https://mirrors.cloud.tencent.com/)
 
 #### 基础软件
 
