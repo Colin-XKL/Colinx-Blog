@@ -170,10 +170,12 @@ Host serverA
 ```json
 {
   "registry-mirrors": [
-    "https://mirror.ccs.tencentyun.com",
-    "http://hub-mirror.c.163.com",
-    "https://registry.docker-cn.com",
-    "https://docker.mirrors.ustc.edu.cn"
+    "https://hub-mirror.c.163.com",
+    "https://mirror.baidubce.com",
+    "https://docker.nju.edu.cn",
+    "https://docker.mirrors.sjtug.sjtu.edu.cn",
+    "https://dockerproxy.com",
+    "https://docker.m.daocloud.io"
   ]
 }
 ```
