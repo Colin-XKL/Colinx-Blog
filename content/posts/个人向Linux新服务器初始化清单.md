@@ -35,9 +35,9 @@ tags:
 
 ```shell
 // -m 创建对应home文件夹
-// 添加到wheel用户组自动获得sudo权限
+// 添加到 sudo 用户组自动获得sudo权限, 部分发行版为wheel组
 
-useradd -m --groups wheel colin
+useradd -m --groups sudo colin
 ```
 
 也可直接编辑`/etc/sudoers` 文件为新用户添加 sudo 权限，使用 `visudo` 指令可以自动帮你校验，避免配置写错把系统搞崩
