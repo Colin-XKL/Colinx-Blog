@@ -238,7 +238,7 @@ update 20230720: 部分镜像源不再可用，更新镜像源配置。参考 ht
 
 8. RSS Man X 的除 lite 以外的版本默认包含了自托管的 mercury 实例，你只需要在插件配置页面设置 mercury 实例地址为 `service.mercury:3000` 即可，同理，OpenCC 实例地址为`service.opencc:3000`
 
-9. 如果部分 RSS 源不能订阅，检查是否使用了非常规端口。在`.env`文件中设置`RSS_ALLOEW_PORTS`
+9. 如果部分 RSS 源不能订阅，检查是否使用了非常规端口。在`.env`文件中设置`RSS_ALLOW_PORTS`
 
 10. 若部署后某个应用一直无法通过浏览器访问，请检查是否绑定到了`6000`/`6666`等特殊端口，浏览器会拦截对这些端口的访问参见[这里](https://blog.colinx.one/posts/docker-compose%E7%9A%84%E9%94%99%E8%AF%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/)
 
