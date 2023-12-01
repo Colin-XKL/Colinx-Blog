@@ -187,7 +187,7 @@ Host serverA
 安装 OH-MY-ZSH, 在此之前确保已安装 `git` 和 `zsh`
 
 ```shell
-sh -c "$(curl -fsSL [https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh](https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh))"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ```
 
