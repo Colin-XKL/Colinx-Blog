@@ -175,9 +175,9 @@ Cygwin 的安装程序可以[从其官方站点下载](https://cygwin.com/instal
 
 
 
-配置 VSCode 的作为 C 语言学习环境
+## 配置 VSCode 的作为 C 语言学习环境
 
-<span id="vscode">VSCode</span>是由微软主导开发的一款开源免费、轻巧简单、功能强大的代码编辑器。配合各式各样的插件可以方便地实现各种你想得到和你想不到的功能。
+VSCode 是由微软主导开发的一款开源免费、轻巧简单、功能强大的代码编辑器。配合各式各样的插件可以方便地实现各种你想得到和你想不到的功能。
 
 前往[VSCode 官网](https://code.visualstudio.com/)下载 Windows 版 VScode。并按照安装程序的指引进行安装。
 
