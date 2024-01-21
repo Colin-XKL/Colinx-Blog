@@ -80,13 +80,20 @@ sudo apt install zsh tmux htop duf htop tldr screenfetch tree
 
 `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys`
 
-注意修改权限，`~/.ssh/authorized_keys` 权限为 600. `~/.ssh/`为 400
+注意修改权限，`~/.ssh/authorized_keys` 权限为 600. `~/.ssh/`为 700
+
+可以参考以下设置
+
+> .ssh/    0700/rwx------  
+> .ssh/*.pub   644/rw-r--r--  
+> .ssh/*   0600/rw-------
+
 
 如失败可参考这篇文章 debug. [https://superuser.com/questions/1137438/ssh-key-authentication-fails](https://superuser.com/questions/1137438/ssh-key-authentication-fails)
 
 ### 1.5 设置 hostname
 
-可选，为了便于识别和后续配置 oh-my-zsh 更美观
+可选，为了便于识别和后续配置 oh-my-zsh 更美观. 这里修改完后还需要更新 hosts设置，把刚才设置的新的主机名指向 localhost
 
 ```shell
 sudo hostnamectl set-hostname my-new-server
