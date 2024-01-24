@@ -135,6 +135,9 @@ sudo swapon -s
 
 保存并退出文件。现在我们的交换分区会一直被挂载了。我们重启后可以在终端运行  `free -m`  来检查交换分区是否生效。
 
+
+还可以按需选择使用 zram，提升内存可用量，不过会略微增加 cpu 使用和内存延时。可以搜索 zramctl, zramswap 等关键字
+
 ---
 
 ### 1.7 绑定域名  
@@ -188,7 +191,12 @@ Host serverA
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
+# 如果在墙内 github 速度不加可以考虑使用清华的镜像
+# https://mirrors.tuna.tsinghua.edu.cn/help/ohmyzsh.git/
+# 先下载到任意位置，然后指定REMOTE 参数执行安装程序
+git clone https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git --depth=1
+cd ohmyzsh/tools
+REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
 ```
 
 安装插件
@@ -198,6 +206,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting --depth=1 
 ```
+
+git clone速度不佳可以考虑一些开放的加速服务，比如：
+- https://ghproxy.org/
+- https://mirror.ghproxy.com/
+
 
 按需修改配置。文件位置`~/.zshrc`, 下面为个人常用配置供参考。注意去源文件修改对应项，没有再到末尾加
 
