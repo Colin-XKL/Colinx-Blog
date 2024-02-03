@@ -27,9 +27,14 @@ https://www.linode.com/docs/guides/install-plex-media-server-on-ubuntu-18-04/#co
 
 知道了问题所在, 解决方案还是比较简单的, 那就是 SSH 连接使用端口转发, 将目标服务器 Plex 网页服务的端口, 映射到本机的一个端口. 这样访问本机的这个端口, 就能访问到 Plex 服务了, 而对于 Plex 服务器的 Web 端来说, 我们就是访问的本机地址.
 
+访问 http://localhost:8888/web/ 即可看到Plex的页面. 如果没有带上后面的`web` 后缀的话, 直接访问可能会显示一个XML页面.
+
 ```bash
 ssh user@192.0.2.1 -L 8888:localhost:32400
 ```
+
+上面这句话就是ssh连接到192.0.2.1这个远端,然后在本地,即ssh客户端的机器,监听8888端口,本地所有访问8888端口的请求都会被重定向,等同为远端机器访问自身的32400端口,即为上文提到的,部署plex服务的端口
+
 
 ![Pasted image 20221216213514](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202312312254781.png)
 如下是正常的初始化页面:
