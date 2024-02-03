@@ -22,7 +22,7 @@ tags:
 
 近期刚好关注到雷池 WAF 这个项目比较火, 看了下是国内一个安全公司搞得, 看 Github Repo 和官方文档像模像样的, 虽然文档跟大多数中文项目一样, 很多地方写的不够清晰, 一些小细节没有跟最新的版本同步, 但是**总体而言, 可用, 不难用. 值得一试**
 
-![Pasted image 20231218222249](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202312182326408.png)
+![Pasted image 20231218222249](https://blog-1301127393.file.myqcloud.com/BlogImgs/202312182326408.png)
 
 ## 使用体验
 
