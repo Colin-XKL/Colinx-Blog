@@ -18,7 +18,7 @@ Plex 是一款非常好用的影音库, 可自托管, 支持 Web, 颜值在线. 
 
 问题页面如图所示, 正常来说新 Plex 服务器是要设定电影资料库, 电视节目资料库的文件夹位置, 绑定 Plex 账号等. 官方文档和其他人的流程都大致如此. 但是我访问这个新 Plex 实例对应的初始化 URL, 进来怎么也找不到配置文件夹位置的入口.
 
-![Pasted image 20221216213737](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202312312254779.png)
+![Pasted image 20221216213737](https://blog-1301127393.file.myqcloud.com/BlogImgs/202312312254779.png)
 后来在这两个地方的资料才发现一些端倪, 人家一般都是在 NAS 本机安装, 然后访问本机地址进入初始化页面, 但是我这个就不是.
 
 https://askubuntu.com/questions/1321062/plex-installation-doesnt-give-option-to-setup-server
@@ -36,14 +36,14 @@ ssh user@192.0.2.1 -L 8888:localhost:32400
 上面这句话就是ssh连接到192.0.2.1这个远端,然后在本地,即ssh客户端的机器,监听8888端口,本地所有访问8888端口的请求都会被重定向,等同为远端机器访问自身的32400端口,即为上文提到的,部署plex服务的端口
 
 
-![Pasted image 20221216213514](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202312312254781.png)
+![Pasted image 20221216213514](https://blog-1301127393.file.myqcloud.com/BlogImgs/202312312254781.png)
 如下是正常的初始化页面:
-![Pasted image 20221216214020](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202312312254782.png)
+![Pasted image 20221216214020](https://blog-1301127393.file.myqcloud.com/BlogImgs/202312312254782.png)
 有些情况下可能会遇到需要额外执行关联操作的情况, 不过问题不大
 
-![Pasted image 20221216214456](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202312312254783.png)
-![Pasted image 20221216214521](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202312312254784.png)
+![Pasted image 20221216214456](https://blog-1301127393.file.myqcloud.com/BlogImgs/202312312254783.png)
+![Pasted image 20221216214521](https://blog-1301127393.file.myqcloud.com/BlogImgs/202312312254784.png)
 
 配置成功后就可以正常享受影音资源啦 😎
 
-![Pasted image 20231231225353](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202312312254785.png)
+![Pasted image 20231231225353](https://blog-1301127393.file.myqcloud.com/BlogImgs/202312312254785.png)
