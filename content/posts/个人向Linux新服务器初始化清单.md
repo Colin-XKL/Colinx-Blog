@@ -93,7 +93,7 @@ sudo apt install zsh tmux htop duf htop tldr screenfetch tree
 
 ### 1.5 设置 hostname
 
-可选，为了便于识别和后续配置 oh-my-zsh 更美观. 这里修改完后还需要更新 hosts设置，把刚才设置的新的主机名指向 localhost
+可选，为了便于识别和后续配置 oh-my-zsh 更美观。这里修改完后还需要更新 hosts 设置，把刚才设置的新的主机名指向 localhost
 
 ```shell
 sudo hostnamectl set-hostname my-new-server
@@ -214,7 +214,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting --depth=1 
 ```
 
-git clone速度不佳可以考虑一些开放的加速服务，比如：
+git clone 速度不佳可以考虑一些开放的加速服务，比如：
 - https://ghproxy.org/
 - https://mirror.ghproxy.com/
 
