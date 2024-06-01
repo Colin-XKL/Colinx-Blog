@@ -173,20 +173,29 @@ Host serverA
 或者我之前写的 RSS MAN 部署文档中 docker 安装的部分
 [RSS MAN X 安装部署指南/#1-docker 环境准备](https://blog.colinx.one/posts/rssmanx%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/#1-docker%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
 
-#### Docker 镜像源配置
+#### Docker 镜像源配置及日志配置
+
+docker mirror配置可以加速image pull, 国内公开可用的加速站点可以参考这里 [docker 加速站点](https://gist.github.com/y0ngb1n/7e8f16af3242c7815e7ca2f0833d3ea6)
+
+此外服务器上的docker都是长时间持续运行的, 不少容器日志打的很随意,log文件容易占据过多空间, 也最好限制一下.
+
 
 文件位置`/etc/docker/daemon.json`, 下面的配置供参考
 
 ```json
 {
-  "registry-mirrors": [
-    "https://hub-mirror.c.163.com",
-    "https://mirror.baidubce.com",
-    "https://docker.nju.edu.cn",
-    "https://docker.mirrors.sjtug.sjtu.edu.cn",
-    "https://dockerproxy.com",
-    "https://docker.m.daocloud.io"
-  ]
+    "registry-mirrors": [
+        "https://mirror.baidubce.com",
+        "https://docker.nju.edu.cn",
+        "https://docker.mirrors.sjtug.sjtu.edu.cn",
+        "https://dockerproxy.com",
+        "https://docker.m.daocloud.io",
+        "https://mirror.iscas.ac.cn"
+    ],
+    "log-opts": {
+        "max-file": "5",
+        "max-size": "20m"
+    }
 }
 ```
 
