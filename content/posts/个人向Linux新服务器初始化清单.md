@@ -145,6 +145,10 @@ sudo swapon -s
 
 还可以按需选择使用 zram，提升内存可用量，不过会略微增加 cpu 使用和内存延时。可以搜索 zramctl, zramswap 等关键字
 
+
+注意 Debian 新版本 swapon 等工具所在的目录 /usr/sbin 不在普通用户的 PATH 中, 可能需要手动执行前缀使用. 如 /usr/sbin/swapon 
+
+
 ---
 
 ### 1.7 绑定域名  
