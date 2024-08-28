@@ -146,7 +146,7 @@ sudo swapon -s
 还可以按需选择使用 zram，提升内存可用量，不过会略微增加 cpu 使用和内存延时。可以搜索 zramctl, zramswap 等关键字
 
 
-注意 Debian 新版本 swapon 等工具所在的目录 /usr/sbin 不在普通用户的 PATH 中, 可能需要手动执行前缀使用. 如 /usr/sbin/swapon 
+注意 Debian 新版本 swapon 等工具所在的目录 /usr/sbin 不在普通用户的 PATH 中，可能需要手动执行前缀使用。如 /usr/sbin/swapon 
 
 
 ---
@@ -179,9 +179,9 @@ Host serverA
 
 #### Docker 镜像源配置及日志配置
 
-docker mirror配置可以加速image pull, 国内公开可用的加速站点可以参考这里 [docker 加速站点](https://gist.github.com/y0ngb1n/7e8f16af3242c7815e7ca2f0833d3ea6)
+docker mirror 配置可以加速 image pull, 国内公开可用的加速站点可以参考这里 [docker 加速站点](https://gist.github.com/y0ngb1n/7e8f16af3242c7815e7ca2f0833d3ea6)
 
-此外服务器上的docker都是长时间持续运行的, 不少容器日志打的很随意,log文件容易占据过多空间, 也最好限制一下.
+此外服务器上的 docker 都是长时间持续运行的，不少容器日志打的很随意，log 文件容易占据过多空间，也最好限制一下。
 
 
 文件位置`/etc/docker/daemon.json`, 下面的配置供参考
