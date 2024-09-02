@@ -1,8 +1,8 @@
 ---
-title:  Mac 平台配置C/Python/Java学习环境
+title:  Mac 平台配置 C/Python/Java 学习环境
 date: 2020-12-18
 lastmod: 2020-12-19
-description: Mac 平台配置C/Python/Java学习环境
+description: Mac 平台配置 C/Python/Java 学习环境
 categories:
 - 技术
 - 指南
@@ -18,7 +18,7 @@ tags:
 
 
 
-<!-- # Mac平台配置C/Python/Java学习环境 -->
+<!-- # Mac 平台配置 C/Python/Java 学习环境 -->
 
 > 本系列教程旨在为刚入门的编程语言学习者做好指南工作，开始编码，本应很简单
 >
@@ -68,7 +68,7 @@ C 语言的编译需要编译器，一般可以选择 gcc 或是 clang。Mac 系
 
 <img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201219015620.png" alt="image-20201218222511011" style="zoom:50%;" />（截图中因为本地已安装故只显示了 Uninstall 卸载按钮。未安装的情况下会显示 Install 按钮可点击安装）
 
-其他插件可根据需要安装。此处推荐安装 C/C++插件以实现 C 代码的高亮和补全等功能。
+其他插件可根据需要安装。此处推荐安装 C/C++ 插件以实现 C 代码的高亮和补全等功能。
 
 <img src="https://blog-1301127393.file.myqcloud.com/BlogImgs/20201219015624.png" alt="image-20201218223432859" style="zoom:50%;" />
 
