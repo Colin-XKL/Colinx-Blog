@@ -27,9 +27,9 @@ tags:
 
 seq 不仅支持 syslog, 还支持程序主动上报、采集容器日志等很多功能, 这里只主要围绕 syslog, 收集各种终端设备日志做介绍
 
-![Pasted image 20241013170403](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202410132128864.png)
+![Pasted image 20241013170403](https://blog-1301127393.file.myqcloud.com/BlogImgs/202410132128864.png)
 
-![Pasted image 20241013170340](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202410132128865.png)
+![Pasted image 20241013170340](https://blog-1301127393.file.myqcloud.com/BlogImgs/202410132128865.png)
 
 ## 安装: 通过 docker compose 部署 seq
 
@@ -80,13 +80,13 @@ services:
 
 在 system -> system 菜单下, 有个 logging 的 tab, 里面配置好服务器 ip、端口就可以使用了. 协议记得选 udp
 
-![Pasted image 20241013165852](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202410132128867.png)
+![Pasted image 20241013165852](https://blog-1301127393.file.myqcloud.com/BlogImgs/202410132128867.png)
 
 ### truenas 配置远程 log
 
 在 system setting -> advaned -> syslog 菜单下, 配置远程服务器地址和端口, 协议选择 udp, 保存就可以了
 
-![Pasted image 20241013171725](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202410132128868.png)
+![Pasted image 20241013171725](https://blog-1301127393.file.myqcloud.com/BlogImgs/202410132128868.png)
 
 ### linux 服务器配置远程 log
 
@@ -139,9 +139,9 @@ sudo systemctl restart rsyslog
 
 默认情况下, 是没有配置日志清理规则的, 时间一长服务器硬盘可能直接满了, 所以这里一定不要忘记配置自动清理. 在菜单里的 retention 可以配置过多少天删除
 
-![Pasted image 20241013170659](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202410132128869.png)
+![Pasted image 20241013170659](https://blog-1301127393.file.myqcloud.com/BlogImgs/202410132128869.png)
 
-![Pasted image 20241013170654](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202410132128870.png)
+![Pasted image 20241013170654](https://blog-1301127393.file.myqcloud.com/BlogImgs/202410132128870.png)
 
 ### 配置告警通知
 
