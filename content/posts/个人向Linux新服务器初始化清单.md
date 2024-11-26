@@ -277,6 +277,51 @@ sudo timedatectl set-timezone Asia/Shanghai
 
 懂得都懂，自己搜
 
+### 2.6 fail2ban 配置
+使用 fail2ban 可以很好地保护你的服务器，避免被人恶意爆破 SSH 等服务。
+```bash
+// 安装 fail2ban
+sudo apt update && sudo apt install fail2ban
+sudo systemctl enable fail2ban
+```
+之后需要按照实际情况修改一下配置文件。 这里记录一下最小配置. 注意默认的配置 `/etc/fail2ban/jail.conf`不要改，不然每次软件更新会被覆盖。 在 jaid.d 这个目录下面新建一个文件`/etc/fail2ban/jail.d/local.conf`
+```conf
+[sshd]
+enabled = true
+port = 20000 # 这里修改为实际的 sshd 端口
+filter = sshd
+banaction = iptables-allports
+
+[DEFAULT]
+findtime = 600 # 10min 时间窗口
+maxretry = 3
+bantime = 6h
+```
+
+之后重启`sudo systemctl restart fail2ban`， 然后可以看下服务状态是否正常 `sudo systemctl status fail2ban`， 如果配置文件有问题会报错。如果是显示` active (running)` 就说明没有问题了。
+
+fail2ban的测试及关闭服务方法：
+
+查看当前封禁IP：`sudo fail2ban-client status sshd`  
+解禁某一IP: `sudo fail2ban-client set sshd unbanip IP_ADDRESS`  
+停止fail2ban服务：`sudo systemctl stop fail2ban`  
+关闭fail2ban服务：`sudo systemctl disable fail2ban`  
+
+刚配置没一会就有 IP 被封禁了，可以看到效果还是很给力，也安心了不少
+```
+➜ sudo fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed: 1
+|  |- Total failed:     6
+|  `- File list:        /var/log/auth.log
+`- Actions
+   |- Currently banned: 1
+   |- Total banned:     1
+   `- Banned IP list:   154.216.19.42
+```
+
+
 ## 3 - 进阶内容
 
 ### 3.1 内核参数调优
