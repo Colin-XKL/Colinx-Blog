@@ -293,7 +293,7 @@ filter = sshd
 banaction = iptables-allports
 
 [DEFAULT]
-findtime = 600 # 10min 时间窗口
+findtime = 3600 # 1h 时间窗口
 maxretry = 3
 bantime = 6h
 ```
