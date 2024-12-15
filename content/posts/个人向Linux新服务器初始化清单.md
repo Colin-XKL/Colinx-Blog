@@ -286,7 +286,7 @@ sudo timedatectl set-timezone Asia/Shanghai
 sudo apt update && sudo apt install fail2ban
 sudo systemctl enable fail2ban
 ```
-之后需要按照实际情况修改一下配置文件。 这里记录一下最小配置. 注意默认的配置 `/etc/fail2ban/jail.conf`不要改，不然每次软件更新会被覆盖。 在 jaid.d 这个目录下面新建一个文件`/etc/fail2ban/jail.d/local.conf`
+之后需要按照实际情况修改一下配置文件。这里记录一下最小配置。注意默认的配置 `/etc/fail2ban/jail.conf`不要改，不然每次软件更新会被覆盖。在 jaid.d 这个目录下面新建一个文件`/etc/fail2ban/jail.d/local.conf`
 ```conf
 [sshd]
 enabled = true
@@ -300,14 +300,14 @@ maxretry = 3
 bantime = 6h
 ```
 
-之后重启`sudo systemctl restart fail2ban`， 然后可以看下服务状态是否正常 `sudo systemctl status fail2ban`， 如果配置文件有问题会报错。如果是显示` active (running)` 就说明没有问题了。
+之后重启`sudo systemctl restart fail2ban`，然后可以看下服务状态是否正常 `sudo systemctl status fail2ban`，如果配置文件有问题会报错。如果是显示` active (running)` 就说明没有问题了。
 
-fail2ban的测试及关闭服务方法：
+fail2ban 的测试及关闭服务方法：
 
-查看当前封禁IP：`sudo fail2ban-client status sshd`  
-解禁某一IP: `sudo fail2ban-client set sshd unbanip IP_ADDRESS`  
-停止fail2ban服务：`sudo systemctl stop fail2ban`  
-关闭fail2ban服务：`sudo systemctl disable fail2ban`  
+查看当前封禁 IP：`sudo fail2ban-client status sshd`  
+解禁某一 IP: `sudo fail2ban-client set sshd unbanip IP_ADDRESS`  
+停止 fail2ban 服务：`sudo systemctl stop fail2ban`  
+关闭 fail2ban 服务：`sudo systemctl disable fail2ban`  
 
 刚配置没一会就有 IP 被封禁了，可以看到效果还是很给力，也安心了不少
 ```
