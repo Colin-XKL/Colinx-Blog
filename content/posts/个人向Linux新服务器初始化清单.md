@@ -183,22 +183,24 @@ docker mirror 配置可以加速 image pull, 国内公开可用的加速站点�
 
 此外服务器上的 docker 都是长时间持续运行的，不少容器日志打的很随意，log 文件容易占据过多空间，也最好限制一下。
 
-
 文件位置`/etc/docker/daemon.json`, 下面的配置供参考
 
 ```json
 {
     "registry-mirrors": [
-        "https://mirror.baidubce.com",
-        "https://docker.nju.edu.cn",
-        "https://docker.mirrors.sjtug.sjtu.edu.cn",
-        "https://dockerproxy.com",
-        "https://docker.m.daocloud.io",
-        "https://mirror.iscas.ac.cn"
+        "https://docker.nastool.de",
+        "https://docker.actima.top",
+        "https://docker.unsee.tech",
+        "https://docker.gh-proxy.com",
+        "https://docker.zhai.cm",
+        "https://docker.1panel.live",
+        "https://docker.1ms.run",
+        "https://docker.imgdb.de",
+        "https://dockerproxy.net"
     ],
     "log-opts": {
         "max-file": "5",
-        "max-size": "20m"
+        "max-size": "10m"
     }
 }
 ```
