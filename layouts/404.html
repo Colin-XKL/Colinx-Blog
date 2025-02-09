@@ -230,9 +230,9 @@
             margin-top: 4rem;
             padding: 1.2rem 3rem;
             color: white;
-            color: #01ac88;
+            color: #9dd5c0;
             /* background-color: #04cba0; */
-            border: #01ac88;
+            border: #9dd5c0;
             border-width: 2px;
             border-style: solid;
             transition: all 0.15s ease-in-out
@@ -242,7 +242,7 @@
 
         .button:hover {
             color: white;
-            background-color: #01ac88;
+            background-color: #9dd5c0;
             font-weight: bold;
         }
 
@@ -258,7 +258,23 @@
         }
 
         .byLink {
-            color: #04cba0;
+            color: #9dd5c0;
+        }
+
+        /* custom ::selection */
+        ::selection {
+            background: #9dd5c0;
+            color: #fff;
+        }
+
+        ::-moz-selection {
+            background: #9dd5c0;
+            color: #fff;
+        }
+
+        ::-webkit-selection {
+            background: #9dd5c0;
+            color: #fff;
         }
     </style>
 </body>
