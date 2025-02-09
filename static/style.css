@@ -39,7 +39,7 @@
   padding: 1rem 0rem;
 }
 
-ol.toc-list > li > a:hover {
+ol.toc-list>li>a:hover {
   text-underline-position: under;
   font-weight: bolder;
 }
@@ -57,45 +57,47 @@ ol.toc-list > li > a:hover {
 }
 
 .is-active-link::before {
-  background-color: #d71a1b !important;
+  background-color: #9dd5c0 !important;
 }
 
 .logo__cursor {
-  background: #d71a1b;
+  background: #9dd5c0;
 }
 
 /* 超链接样式  */
 
 .post-tags a,
-.post-content a {
+.post-content a,
+.index-content a {
   text-decoration: none;
-  border-bottom: 1px dashed #d71a1b;
+  border-bottom: 1px dashed #9dd5c0;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .post-tags a:hover,
 .post-content a:hover,
+.index-content a:hover,
 nav a:hover {
   text-decoration: none;
-  border-bottom: 2px solid #d71a1b;
+  border-bottom: 2px solid #9dd5c0;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
 
 /* custom ::selection */
 ::selection {
-  background: #b5b5b5;
+  background: #9dd5c0;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #b5b5b5;
+  background: #9dd5c0;
   color: #fff;
 }
 
 ::-webkit-selection {
-  background: #b5b5b5;
+  background: #9dd5c0;
   color: #fff;
 }
 
@@ -116,3 +118,33 @@ nav a:hover {
 .post-content a:active {
     background-size: 80% 100%;
 } */
+
+.logo__cursor {
+  background-color: #9dd5c0 !important;
+}
+
+.on-list .post-title:hover {
+  transform: translateY(-0.1rem);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.read-more:hover {
+  transform: translateX(0.1rem);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+span.button.next:hover {
+  display: block;
+  transform: translateX(0.2rem);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.21s ease-in-out;
+}
+
+span.button.previous:hover {
+  display: block;
+  transform: translateX(-0.2rem);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}

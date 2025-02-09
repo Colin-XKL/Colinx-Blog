@@ -8,23 +8,71 @@ Params:
     {{ with $.Get "name" }}
         {{ $name := . }}
         {{ $data := getJSON $url }}
-        {{ range $data.data }}
-            {{ $item := . }}
-            
-            <h3 id="{{$item.name}}">{{$item.name}}</h3>
-            {{ $link := urls.Parse $item.link }}
-            <p>{{$item.type}} - {{$item.subtitle}}</p>
-            <p>地址：
+       
+    {{ range $data.data }}
+        {{ $item := . }}
+        <div class="card">
+            <h3 id="{{$item.name}}">{{$item.name}} <span class="badge">{{$item.type}}</span></h3>
+            <p>{{$item.subtitle}}</p>
+            <p><strong>地址：</strong>
+                {{ $link := urls.Parse $item.link }}
                 {{ if (gt (len $link.Host) 1) }}
-                    <a href="{{$item.link}}" >{{$link.Host}}</a> 
+                    <a href="{{$item.link}}">{{$link.Host}}</a>
                 {{ else }}
                     {{$item.link}}
                 {{ end }}
-               </p>
-            {{ if (gt (len $item.StartServingAt) 1) }}
-                <p>上线于{{$item.StartServingAt}}</p>
-            {{ end }}
-
-        {{ end }}
+            </p>
+            <p><strong>上线时间：</strong>
+                {{ if (gt (len $item.StartServingAt) 1) }}
+                    {{$item.StartServingAt}}
+                {{ else }}
+                    无
+                {{ end }}
+            </p>
+        </div>
+        {{ end }}   
     {{ end }}
+    <style>
+        :root {
+            --card-border: #cccccc51;
+         --badge-background: #9dd5c0;
+            --badge-color: white;
+        }
+
+        [data-theme='dark'] {
+            --card-border: #44444451;
+            --badge-background: #9dd5c0;
+            --badge-color: white;
+        }
+        .card {
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            padding: 2rem;
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .card h3 {
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+        }
+        .card p {
+            margin: 5px 0;
+        }
+        .card a {
+            text-decoration: none;
+        }
+        .badge {
+            background-color: #9dd5c0;
+            color: white;
+            border-radius: 12px;
+            padding: 4px 8px;
+            font-size: 0.6em;
+            margin-left: 8px;
+        }
+    </style>
 {{ end }}
