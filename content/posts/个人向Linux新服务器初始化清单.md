@@ -13,9 +13,9 @@ tags:
 
 一份 Linux 初始化清单，避免每次拿到新的服务器都要一个个去各种地方搜集指令，以做备忘 & 供有需要的朋友参考。
 
-服务器发行版我个人推荐 Debian 系列，CentOS 系现在已经开始分裂而且说实话对新手其实并不友好。Debian 是在兼容性，易用性和稳定性之间都取得不错平衡的发行版。新手推荐 Ubuntu, 不过最近商业化有点过度，夹带了越来越多的私活，我个人所有新安装的 Linux 已经全线转向 Debian. 下文以目前最新的 Debian 11 Bullseye 为例. Debian 12 bookworm 也测试通过.
+服务器发行版我个人推荐 Debian 系列，CentOS 系现在已经开始分裂而且说实话对新手其实并不友好。Debian 是在兼容性，易用性和稳定性之间都取得不错平衡的发行版。新手推荐 Ubuntu, 不过最近商业化有点过度，夹带了越来越多的私活，我个人所有新安装的 Linux 已经全线转向 Debian. 下文以目前最新的 Debian 11 Bullseye 为例。Debian 12 bookworm 也测试通过。
 
-> azure 干净的 debian 11 镜像，资源使用情况供参考: 
+> azure 干净的 debian 11 镜像，资源使用情况供参考：
 > 
 > ~1G Disk, ~100M RAM, ~300 packages
 
@@ -30,7 +30,7 @@ tags:
 检查服务商防火墙和系统自带防火墙 (debian 系一般为 `ufw`, cent os 系一般为 `firewall-cmd`).放行 SSH(22), 新的 SSH(自定义), HTTP, HTTPS, 以及其他常用开发端口
 
 ### 1.2 新建用户与检查 sudoer
-登录到root用户, 创建个人账户并设定密码
+登录到 root 用户，创建个人账户并设定密码
 ```shell
 // -m 创建对应home文件夹
 // 添加到 sudo 用户组自动获得sudo权限, 部分发行版为wheel组
@@ -73,8 +73,8 @@ sudo apt install zsh tmux htop duf htop tldr screenfetch tree
 
 ### 1.4 SSH 安全
 
-修改端口，配置文件`/etc/ssh/sshd_config`. 重启机器或 sshd 服务后生效. 
-此外最好将`PermitRootLogin`修改为`no`, 可以禁用root登录.
+修改端口，配置文件`/etc/ssh/sshd_config`. 重启机器或 sshd 服务后生效。
+此外最好将`PermitRootLogin`修改为`no`, 可以禁用 root 登录。
 
 在本机检查`~/.ssh/`有无 id_rsa 等已生成的 key. 如没有再使用 `ssh-keygen` 生成私钥
 将本机的公钥上传到远端，再写入远端的 `authorized_keys` 中
@@ -99,7 +99,7 @@ sudo hostnamectl set-hostname my-new-server
 sudo hostnamectl status
 ```
 
-此外`/etc/hosts` 中默认会有个本机hostname映射到`127.0.0.1` 的配置, 修改host之后这里别名的映射也要修改下,不然终端执行命令会一直弹 `sudo: unable to resolve host xxx: Name or service not known`
+此外`/etc/hosts` 中默认会有个本机 hostname 映射到`127.0.0.1` 的配置，修改 host 之后这里别名的映射也要修改下，不然终端执行命令会一直弹 `sudo: unable to resolve host xxx: Name or service not known`
 
 修改后需重启
 
@@ -351,7 +351,7 @@ sudo sysctl -p
 
 
 ### 3.2 更多内存空间 - ZRAM
-ZRAM 内存压缩, 对于个人服务器来说, 始终活跃的程序占用的内存只有比较小一部分,启用zram 可以将这部分内存压缩, 从而可以部署更多的服务. 
+ZRAM 内存压缩，对于个人服务器来说，始终活跃的程序占用的内存只有比较小一部分，启用 zram 可以将这部分内存压缩，从而可以部署更多的服务。
 
 建议使用`zramtool`, 简单方便
 ```shell
@@ -363,8 +363,8 @@ ALGO=zstd
 PERCENT=60
 ```
 
-之后执行`sudo service zramswap reload`重载生效.
-可以使用swapon 命令查看生效情况
+之后执行`sudo service zramswap reload`重载生效。
+可以使用 swapon 命令查看生效情况
 ```
 ~ » sudo swapon -show 
 NAME        TYPE        SIZE  USED PRIO
@@ -372,19 +372,19 @@ NAME        TYPE        SIZE  USED PRIO
 /dev/zram0  partition 489.9M    0B  100
 ```
 
-这样依赖, 会将机器物理内存的50%配置zram, 使用zstd压缩算法,一般压缩比能达到3:1, 也就是说,1G的机器,可以相当于有`0.5G+3*0.5G=2G`的内存.
+这样依赖，会将机器物理内存的 50% 配置 zram, 使用 zstd 压缩算法，一般压缩比能达到 3:1, 也就是说，1G 的机器，可以相当于有`0.5G+3*0.5G=2G`的内存。
 
 注意 Debian 新版本 swapon 等工具所在的目录 /usr/sbin 不在普通用户的 PATH 中，可能需要手动执行前缀使用。如 /usr/sbin/swapon 
 
-### 3.3 更多内存空间 - 关闭kdump,释放预留的内存空间
+### 3.3 更多内存空间 - 关闭 kdump，释放预留的内存空间
 
-新服务器开起来之后, 你会发现无论是htop还是free等命令, 看到的总内存就是比你买服务器时页面上写的要小.比如我开的两核1G的机器,实际机器上看到的总内存只有816M. 这是因为linux系统会默认开启kdump,预留了一部分内存不让我们使用.
+新服务器开起来之后，你会发现无论是 htop 还是 free 等命令，看到的总内存就是比你买服务器时页面上写的要小。比如我开的两核 1G 的机器，实际机器上看到的总内存只有 816M. 这是因为 linux 系统会默认开启 kdump，预留了一部分内存不让我们使用。
 
-Kdump是Linux系统的一种内核崩溃转储机制，它允许在系统发生内核崩溃（例如内核panic）时，捕获内存的转储信息，从而帮助事后分析故障原因。 默认的配置`2G-8G:256M,8G-16G:512M,16G-:768M`, 如果你买的是2G的机器,上来就有1/8的空间用不了.
+Kdump 是 Linux 系统的一种内核崩溃转储机制，它允许在系统发生内核崩溃（例如内核 panic）时，捕获内存的转储信息，从而帮助事后分析故障原因。默认的配置`2G-8G:256M,8G-16G:512M,16G-:768M`, 如果你买的是 2G 的机器，上来就有 1/8 的空间用不了。
 
-但是我们个人日常使用的linux机器基本用不到这个功能, 不用预留这部分空间.
+但是我们个人日常使用的 linux 机器基本用不到这个功能，不用预留这部分空间。
 
-操作方法有两种: 将预留内存改为0 or 直接关闭kdump服务. 对于个人玩家小内存机器我建议直接关闭. 操作如下:
+操作方法有两种：将预留内存改为 0 or 直接关闭 kdump 服务。对于个人玩家小内存机器我建议直接关闭。操作如下：
 
 ```bash
 # 备份grub配置文件
@@ -413,7 +413,7 @@ sudo systemctl status kdump
 cat /sys/kernel/kexec_crash_size
 ```
 
-更多内容可以参见这篇文档: [预留内存相关文档-阿里云](https://help.aliyun.com/zh/ecs/use-cases/view-and-change-the-size-of-reserved-memory-on-a-linux-instance#7d5ae6803amdp) 或者 [预留内存相关文档-腾讯云](https://cloud.tencent.com/document/product/213/115734)
+更多内容可以参见这篇文档：[预留内存相关文档 - 阿里云](https://help.aliyun.com/zh/ecs/use-cases/view-and-change-the-size-of-reserved-memory-on-a-linux-instance#7d5ae6803amdp) 或者 [预留内存相关文档 - 腾讯云](https://cloud.tencent.com/document/product/213/115734)
 
 
 ### 3.3 其他进阶配置
