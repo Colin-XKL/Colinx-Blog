@@ -1,6 +1,7 @@
 ---
 title: 个人向 Linux 新服务器初始化清单
 date: 2023-03-14
+lastmod: 2025-06-21
 description: 一份 Linux 初始化清单，避免每次拿到新的服务器都要一个个去各种地方搜集指令，以做备忘 & 供有需要的朋友参考。以目前最新的 Debian 11 Bullseye 为例
 categories:
 - 技术
@@ -107,11 +108,9 @@ sudo hostnamectl status
 
 ### 1.6 SWAP
 
-可选，建议内存<2G 配置 swap, 大小至少为 2 倍物理内存
+可选，建议内存<2G 配置 swap, 大小至少为 2 倍物理内存, 可以有效避免意外爆内存的情况. 仅推荐SSD盘的服务器开启.
 
 推荐用 `fallocate` , 因为这个是最简单、最快速的创建交换空间的方法。 `fallocate`  命令用于为文件预分配块 / 大小。
-
-以下内容参考 linux.cn
 
 使用  `fallocate`  创建交换空间，首先在  `/`  目录下创建一个名为  `swap_space`  的文件。然后分配 2GB 到  `swap_space`  文件：
 
@@ -143,8 +142,6 @@ sudo swapon -s
 
 
 还可以按需选择使用 zram，提升内存可用量，不过会略微增加 cpu 使用和内存延时。可以搜索 zramctl, zramswap 等关键字
-
-
 
 
 ---
@@ -341,6 +338,11 @@ net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr
 net.ipv4.tcp_fastopen=3
 net.ipv4.tcp_slow_start_after_idle=0
+
+# zram 相关配置,配合下文zram使用
+vm.watermark_boost_factor = 0
+vm.watermark_scale_factor = 125
+vm.page-cluster = 0
 ```
 
 配置完之后保存并应用
