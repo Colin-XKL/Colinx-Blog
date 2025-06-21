@@ -108,7 +108,7 @@ sudo hostnamectl status
 
 ### 1.6 SWAP
 
-可选，建议内存<2G 配置 swap, 大小至少为 2 倍物理内存, 可以有效避免意外爆内存的情况. 仅推荐SSD盘的服务器开启.
+可选，建议内存<2G 配置 swap, 大小至少为 2 倍物理内存，可以有效避免意外爆内存的情况。仅推荐 SSD 盘的服务器开启。
 
 推荐用 `fallocate` , 因为这个是最简单、最快速的创建交换空间的方法。 `fallocate`  命令用于为文件预分配块 / 大小。
 
@@ -339,7 +339,7 @@ net.ipv4.tcp_congestion_control=bbr
 net.ipv4.tcp_fastopen=3
 net.ipv4.tcp_slow_start_after_idle=0
 
-# zram 相关配置,配合下文zram使用
+# zram 相关配置，配合下文 zram 使用
 vm.watermark_boost_factor = 0
 vm.watermark_scale_factor = 125
 vm.page-cluster = 0
