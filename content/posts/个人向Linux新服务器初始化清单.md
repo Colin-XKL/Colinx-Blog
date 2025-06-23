@@ -374,7 +374,7 @@ NAME        TYPE        SIZE  USED PRIO
 /dev/zram0  partition 489.9M    0B  100
 ```
 
-这样依赖，会将机器物理内存的 50% 配置 zram, 使用 zstd 压缩算法，一般压缩比能达到 3:1, 也就是说，1G 的机器，可以相当于有`0.5G+3*0.5G=2G`的内存。
+这样一来，会将机器物理内存的 50% 配置 zram, 使用 zstd 压缩算法，一般压缩比能达到 3:1, 也就是说，1G 的机器，可以相当于有`0.5G+3*0.5G=2G`的内存。
 
 注意 Debian 新版本 swapon 等工具所在的目录 /usr/sbin 不在普通用户的 PATH 中，可能需要手动执行前缀使用。如 /usr/sbin/swapon 
 
