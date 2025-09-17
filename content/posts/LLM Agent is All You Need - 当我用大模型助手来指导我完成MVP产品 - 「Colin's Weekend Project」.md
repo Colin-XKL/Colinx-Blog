@@ -35,11 +35,11 @@ tags:
 一开始, 我是打算接住 LLM 让我快速了解产品相关的知识. 但是突然觉得, 既然都用 AI 了,为什么还在遵循原有的路径, 一步步自己学习、理解然后教 AI 做事呢? 换个思路, 我只要提供需求, AI 来拆解任务.
 
 于是
-![image|476x415](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202509172249632.png)
+![image|476x415](https://blog-1301127393.file.myqcloud.com/BlogImgs/202509172249632.png)
 
-![image-1|700x472](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202509172249633.png)
+![image-1|700x472](https://blog-1301127393.file.myqcloud.com/BlogImgs/202509172249633.png)
 
-![image-2|700x472](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202509172249634.png)
+![image-2|700x472](https://blog-1301127393.file.myqcloud.com/BlogImgs/202509172249634.png)
 
 利用 AI 生成一套提示词, 来指导我如果分析我的需求、拆解任务
 
@@ -86,18 +86,18 @@ tags:
 
 最后简要看下最终的成果吧
 
-![image-3](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202509172249635.png)
+![image-3](https://blog-1301127393.file.myqcloud.com/BlogImgs/202509172249635.png)
 
-![image-4](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202509172249636.png)
+![image-4](https://blog-1301127393.file.myqcloud.com/BlogImgs/202509172249636.png)
 
 后台数据:
-![image-5](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202509172249637.png)
+![image-5](https://blog-1301127393.file.myqcloud.com/BlogImgs/202509172249637.png)
 
 ## 埋点上报与用户行为分析
 
 之前做的都是玩具项目和公司内部平台, 没怎么接触过 C 端用户行为分析. 这块确实还是个挺陌生的领域. 不过好在我们有万能的 AI. 在经过埋点需求分析、 技术方案对比、任务拆解之后, 最后采用了 Umami 平台来进行上报, 并简单配置了下指标用于计算用户停留, 辅助验证我们关于用户痛点的假设
 
-![image-6|0x0](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202509172249639.png)
+![image-6|0x0](https://blog-1301127393.file.myqcloud.com/BlogImgs/202509172249639.png)
 
 跟 MVP 导师沟通的时候,确定了验证假设的方式为: 衡量用户是否点击「查看详情」按钮
 
@@ -106,7 +106,7 @@ tags:
 
 为了方便统计, 借助 umaimi 的统计功能快速实现, 我只需要统计有多少比例的用户至少点击了一次「了解详情」. 具体到代码实现上, 就是在「点击详情」按钮添加一个上报, 上报内容包括用户的 session id, 后面在 umaimi 统计一段时间内, 按钮点击事件里面, 有多少独立的 session id 处以总的 uv 就可以.
 
-![image-7](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202509172249640.png)
+![image-7](https://blog-1301127393.file.myqcloud.com/BlogImgs/202509172249640.png)
 
 ## 投放
 
@@ -116,7 +116,7 @@ tags:
 
 尝试做了几个图投放到小红书, 放几个示例图
 
-![image-8](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/202509172249641.png)
+![image-8](https://blog-1301127393.file.myqcloud.com/BlogImgs/202509172249641.png)
 
 用的搞定设计的模版调整了下, 插图是用 Gemini, 效果还可以, 能很好地遵循用户指令, 不过美学方面跟 MidJourney 那些还是差了一截, 毕竟人家专攻的方向. 提示词里面限制好风格的话出图效果还是可以的, 这里后续如果有必要的话, 其实也可以 AI 批量生产插图.
 
