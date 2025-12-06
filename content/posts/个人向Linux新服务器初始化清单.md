@@ -320,6 +320,19 @@ Status for the jail: sshd
    `- Banned IP list:   154.216.19.42
 ```
 
+### 2.7 Git 代理
+一般在 `.bashrc`/`.zshrc` 中定义 `HTTP_PROXY` / `HTTPS_PROXY` 可以应对大部分场景.但是对于使用ssh 协议的git仓库 (通过ssh方式, 相较于https 的不用每次输用户名和密码. 一般对只有克隆公共仓库的时候才会用https, 其他时候对于自己的仓库我都是用ssh), 并不会走http 代理.
+
+这里需要在ssh config 中配置转发走代理才行. 使用`nc`(macOS等默认会预装)搭配socks代理最方便
+
+```ini
+Host github.com
+    HostName github.com
+    User git
+    Port 22
+    ProxyCommand nc -x 192.168.100.222:8085 %h %p
+```
+
 
 ## 3 - 进阶内容
 
