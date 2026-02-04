@@ -204,7 +204,7 @@ lume run openclaw
 ```
 
 之后会输出一个 vnc 地址,可以用 mac 自带的 「屏幕共享」app 进行查看. 菜单「连接」- 「新建」
-![](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20260205000147405.png)
+![](https://blog-1301127393.file.myqcloud.com/BlogImgs/20260205000147405.png)
 
 完成系统安装的几个必要步骤, 然后到设置里把远程控制打开,后面 SSH 要用到. 系统更新建议关掉.
 
@@ -254,7 +254,7 @@ openclaw devices apprve <复制的request id>
 
 ```
 
-![image-25](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20260205000019565.png)
+![image-25](https://blog-1301127393.file.myqcloud.com/BlogImgs/20260205000019565.png)
 
 ```bash
 # 作为node注册
@@ -271,7 +271,7 @@ openclaw node start
 
 之后就可以让 openclaw 调用这个节点啦
 
-![](https://blog-1301127393.cos.ap-shanghai.myqcloud.com/BlogImgs/20260204235959805.png)
+![](https://blog-1301127393.file.myqcloud.com/BlogImgs/20260204235959805.png)
 
 
 
